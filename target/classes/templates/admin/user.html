@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>家居商城后台管理系统</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/me.css" th:href="@{/css/me.css}"/>
+    <link rel="stylesheet" type="text/css" href="../../static/lib/layui/css/layui.css" th:href="@{/lib/layui/css/layui.css}" />
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">家居商城后台管理系统</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="#" th:href="@{/admin/logout}">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item"><a  th:href="@{/admin/index}">首页</a></li>>
+                <li class="layui-nav-item"><a th:href="@{/admin/order}">订单管理</a></li>>
+                <li class="layui-nav-item"><a th:href="@{/admin/item}">商品管理</a></li>
+                <li class="layui-nav-item"><a class="layui-this" th:href="@{/admin/user}">用户管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div class=" m-padded-tb-big m-container-small">
+            <div class="ui stackable container">
+                <!--头部-->
+                <form name="search"   action="#"th:action="@{/admin/query}" method="post" class="ui segment form">
+                    <div class="inline fields">
+                        <div class="field">
+                            <input type="text" name="name"   placeholder="用户名"/>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="type"   placeholder="分类"/>
+                        </div>
+
+                        <div class="field">
+                            <button class="ui mini teal basic button">
+                                <i onclick="document.forms['search'].submit()" class="search icon"></i>搜索
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <table class="ui table">
+                    <thead>
+                    <tr>
+                        <th>用户编号</th>
+                        <th>用户名</th>
+                        <th>密码</th>
+                        <th>类型</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user:${pageInfo.list}">
+                        <td th:text="${user.id}">1</td>
+                        <td th:text="${user.name}">伍兹</td>
+                        <td th:text="${user.password}">10</td>
+                        <td th:text="${user.type}">ad</td>
+
+                        <td>
+                            <a href="#" th:href="@{/admin/toupdate(id=${user.name})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/delete(id=${user.id})}" class="ui mini red basic button">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="5">
+                            <div class="ui mini pagination menu">
+                                <a class=" item"th:href="@{/admin/user(pagenum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
+                                <a class=" item"th:href="@{/admin/user(pagenum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
+                            </div>
+                            <a href="#" class="ui mini teal right floated basic button">新增</a>
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © lijun.com - 欢迎来到智能家居网上商城
+    </div>
+</div>
+<script src="../../static//lib/layui/layui.js" th:src="@{/lib/layui/layui.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+        var element = layui.element;
+
+    });
+</script>
+</body>
