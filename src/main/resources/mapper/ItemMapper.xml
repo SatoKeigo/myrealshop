@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myshop.dao.ItemMapper">
+    <resultMap id="ItemMap" type="Item">
+
+    </resultMap>
+
+    <select id="showAllItem" resultMap="ItemMap">
+       select *
+        from item
+    </select>
+    <select id="selectItemByName" resultMap="ItemMap">
+       select *
+        from item
+        where name=#{name}
+    </select>
+    <select id="selectItemByType" resultMap="ItemMap">
+       select *
+        from item
+        where type=#{type}
+    </select>
+    <select id="selectItemByNameandType" resultMap="ItemMap">
+       select *
+        from item
+        where type=#{type}
+        and name=#{name}
+    </select>
+    <delete id="deleteItemById" >
+       delete from item where id=#{id}
+    </delete>
+    <update id="updateItemName" >
+       update
+        user
+        set num=#{num},type=#{type},price=#{price}
+        where name=#{name}
+    </update>
+</mapper>

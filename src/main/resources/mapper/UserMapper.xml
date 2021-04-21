@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myshop.dao.UserMapper">
+    <resultMap id="UserMap" type="User">
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+    </resultMap>
+    <select id="checkUser" resultMap="UserMap">
+       select name,password
+        from user
+        where name=#{name}
+        and password=#{password}
+    </select>
+    <select id="showAllUser" resultMap="UserMap">
+       select *
+        from user
+    </select>
+    <select id="selectUserByName" resultMap="UserMap">
+       select *
+        from user
+        where name=#{name}
+    </select>
+    <select id="selectUserByType" resultMap="UserMap">
+       select *
+        from user
+        where type=#{type}
+    </select>
+    <select id="selectUserByNameandType" resultMap="UserMap">
+       select *
+        from user
+        where type=#{type}
+        and name=#{name}
+    </select>
+    <delete id="deleteUserById" >
+       delete from user where id=#{id}
+    </delete>
+    <update id="updateUserName" >
+       update
+        user
+        set password=#{password},type=#{type}
+        where name=#{name}
+    </update>
+</mapper>
