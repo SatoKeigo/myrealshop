@@ -1,0 +1,947 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>智能家居 - 智能家居官方网站</title>
+
+  <link rel="shortcut icon" href="http://s01.mifile.cn/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../static/css/main.css"th:href="@{/css/main.css}">
+
+  <script src="../static/js/jquery.min.js"th:src="@{/js/jquery.min.js}"></script>
+
+</head>
+<body>
+<!-- 顶部导航条 -->
+<div class="topbar">
+  <div class="container">
+
+    <div class="topbar-cart">
+      <a href="cart.html"th:href="cart"><i></i>购物车</a>
+    </div>
+    <div class="topbar-info">
+      <a href="#" class="link">登录</a>
+      <span class="ver">|</span>
+      <a href="#" class="link">注册</a>
+      <span class="ver">|</span>
+      <a href="info.html" class="link"th:href="info">个人中心</a>
+    </div>
+  </div>
+</div>
+<!-- header区 -->
+<div class="header">
+  <div class="container">
+    <div class="header-logo">
+      <a href="index.html" class="logo"th:href="index"></a>
+      <div class="advertising">
+        <a href="#"></a>
+      </div>
+    </div>
+    <div class="header-nav">
+      <ul class="navlist clearfix">
+        <li class="all">
+          <div class="side-nav">
+            <ul class="sidenav-list">
+              <li class="side-item"><a href="#">云控温器<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png" class="icon-80"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/xm5_80.png" class="icon-80"><span class="title">大米5X</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/max2_80.jpg" class="icon-80"><span class="title">大米Max2</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/5c_80.png" class="icon-80"><span class="title">大米手机5c</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/xmNOTE2_80.jpg" class="icon-80"><span class="title">大米 Note2</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/MIX_80.jpg" class="icon-80"><span class="title">大米MIX</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/xm5s_80.jpg"><span class="title">大米5s</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/xm5S-plus_80.jpg"><span class="title">大米5s Plus</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/hmn4x_80.png"><span class="title">红米Note 4X</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/hm4x_80.png"><span class="title">红米4X</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/hm4_80.jpg"><span class="title">红米4</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/4G+80.jpg"><span class="title">移动4G+专区</span></a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/compare.jpg" class="icon-80"><span class="title">对比手机</span></a></li>
+                    <li><a href="#" class="link"><img src="img/icon/mifenka-1.jpg"><span class="title">米粉卡 日租卡</span></a></li>
+                    <li><a href="#" class="link"><img src="img/icon/mimobile.jpg"><span class="title">大米移动 电话卡</span></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">云遥控器<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">云电暖温控器<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">云温控阀<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">云开关<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">云插座<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">保护套 贴膜<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">线材 支架 存储卡<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">箱包 服饰 鞋 眼镜<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="side-item"><a href="#">米兔 生活周边<i class="iconfont">&#xe6a7;</i></a>
+                <div class="children-nav">
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                  <ul class="children-list">
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                    <li><a href="#" class="link"><img src="img/icon/holder_40.png"><span class="title">大米6</span></a><a href="#" class="buybtn">选购</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="item"><a href="index.html"th:href="index">首页</a></li>
+        <li class="item"><a href="type.html"th:href="type">智慧家居</a></li>
+        <li class="item"><a href="about.html"th:href="about">关于我们</a></li>
+
+      </ul>
+    </div>
+    <div class="header-search">
+      <form action="" class="search-form">
+        <input type="text" class="search-text">
+        <input type="submit" class="search-btn iconfont" value="&#xe652;">
+      </form>
+    </div>
+  </div>
+</div>
+<!-- 幻灯片区 -->
+<div class="carousel container">
+  <div class="carousel-inner">
+    <img src="holder.js/1226x430?text=图1&bg=01508A" class="item first">
+    <img src="holder.js/1226x430?text=图2&bg=D6B572" class="item">
+    <img src="holder.js/1226x430?text=图3&bg=F46D78" class="item">
+    <img src="holder.js/1226x430?text=图4&bg=EFEBD9" class="item">
+    <img src="holder.js/1226x430?text=图5&bg=B1B336" class="item">
+    <img src="holder.js/1226x430?text=图6&bg=EBBFA2" class="item">
+  </div>
+  <div class="carousel-btn">
+    <a href="javascript:" class="btn active"></a>
+    <a href="javascript:" class="btn"></a>
+    <a href="javascript:" class="btn"></a>
+    <a href="javascript:" class="btn"></a>
+    <a href="javascript:" class="btn"></a>
+    <a href="javascript:" class="btn"></a>
+  </div>
+  <a href="javascript:" class="prev"><i class="iconfont">&#xe697;</i></a>
+  <a href="javascript:" class="next"><i class="iconfont">&#xe6a7;</i></a>
+</div>
+<!-- 功能区  -->
+<div class="home clearfix">
+  <div class="container">
+    <div class="features">
+      <ul class="features-list clearfix">
+        <li class="features-item"><a href="#"><i class="iconfont">&#xe6fd;</i>选购家居</a></li>
+        <li class="features-item"><a href="#"><i class="iconfont">&#xe6fa;</i>企业团购</a></li>
+        <li class="features-item"><a href="#"><i class="iconfont">&#xe6f7;</i>一元活动</a></li>
+        <li class="features-item"><a href="#"><i class="iconfont">&#xe77c;</i>会员卡</a></li>
+        <li class="features-item"><a href="#"><i class="iconfont">&#xe6f2;</i>以旧换新</a></li>
+        <li class="features-item"><a href="#"><i class="iconfont">&#xe6f5;</i>会员充值</a></li>
+      </ul>
+    </div>
+    <div class="hot-promo">
+      <ul class="promo-list clearfix">
+        <li class="promo-item"><a href="#"><img src="holder.js/316x170?bg=FFAC30" alt=""></a></li>
+        <li class="promo-item"><a href="#"><img src="holder.js/316x170?bg=F95754" alt=""></a></li>
+        <li class="promo-item"><a href="#"><img src="holder.js/316x170?bg=4287E4" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 明星单品 -->
+<div class="single-goods">
+  <div class="container">
+    <div class="s-lg-title">
+      <span class="page-title">明星单品</span>
+      <div class="title-more">
+        <a href="javascript:" class="s-prev btn-default"><i class="iconfont">&#xe697;</i></a>
+        <a href="javascript:" class="s-next"><i class="iconfont">&#xe6a7;</i></a>
+      </div>
+    </div>
+    <div class="sgoods-content">
+      <ul class="sgoods-list clearfix" style="margin-left: 0">
+        <!--            <ul class="sgoods-list clearfix" style="margin-left: 0; margin-left: 0.5s ease">-->
+        <li class="sgoods-item">
+          <div class="sgoods-thumb">
+            <a href=""><img src="img/icon/holder_110.png"></a>
+          </div>
+          <div class="goods-title">
+            <a href="" class="title">产品1</a>
+          </div>
+          <p class="goods-info">4100mAh超长续航，多彩金属</p>
+          <p class="goods-price">1440元</p>
+
+        </li>
+        <li class="sgoods-item">
+          <div class="sgoods-thumb">
+            <a href=""><img src="img/icon/holder_110.png"></a>
+          </div>
+          <div class="goods-title">
+            <a href="" class="title">产品2</a>
+          </div>
+          <p class="goods-info">4100mAh超长续航，多彩金属</p>
+          <p class="goods-price">1440元</p>
+        </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品3</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品4</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品5</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品6</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品7</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品8</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品9</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li><li class="sgoods-item">
+        <div class="sgoods-thumb">
+          <a href=""><img src="img/icon/holder_110.png"></a>
+        </div>
+        <div class="goods-title">
+          <a href="" class="title">产品10</a>
+        </div>
+        <p class="goods-info">4100mAh超长续航，多彩金属</p>
+        <p class="goods-price">1440元</p>
+      </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- 主要内容 -->
+<div class="page-main">
+  <div class="container">
+    <!-- 家电 -->
+    <div class="home-ce clearfix">
+      <div class="title">
+        <span class="page-title">智慧家庭</span>
+        <div class="more">
+          <a href="javascript:" class="more-text active">智慧空调</a>
+          <a href="javascript:" class="more-text">智慧取暖</a>
+          <a href="javascript:" class="more-text">智慧照明</a>
+          <a href="javascript:" class="more-text">智慧电器</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <ul class="lg-thumb-list clearfix">
+          <li class="goods-item left-s-thumb">
+            <a href="" class="s-thumb"><img src="holder.js/233x615" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <ul class="goods-list list-active hot-list clearfix">
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门1</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+            <div class="product-label">
+              <div class="goods-label">新品</div>
+            </div>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门2</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门3</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门4</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门5</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门6</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门7</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">热门8</a>
+            </div>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <a href="type.html" class="goods-more"th:href="type">浏览更多 <span>热门</span></a>
+            <div class="goods-thumb">
+              <a href="type.html"th:href="type"><i class="iconfont">&#xe700;</i></a>
+            </div>
+          </li>
+        </ul>
+        <ul class="goods-list list tv-list clearfix">
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视1</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视2</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视3</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视4</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视5</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视6</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视7</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电视8</a>
+            </div>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <a href="type.html" class="goods-more"th:href="type">浏览更多 <span>热门</span></a>
+            <div class="goods-thumb">
+              <a href="type.html"th:href="type"><i class="iconfont">&#xe700;</i></a>
+            </div>
+          </li>
+        </ul>
+        <ul class="goods-list list pc-list clearfix">
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑1</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑2</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑3</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑4</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑5</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑6</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑7</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">电脑8</a>
+            </div>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <a href="type.html" class="goods-more"th:href="type">浏览更多 <span>热门</span></a>
+            <div class="goods-thumb">
+              <a href="type.html"th:href="type"><i class="iconfont">&#xe700;</i></a>
+            </div>
+          </li>
+        </ul>
+        <ul class="goods-list list home-list clearfix">
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居1</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居2</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#" class="title"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居3</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居4</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居5</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居6</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-m">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居7</a>
+            </div>
+            <p class="goods-info">超长续航，多彩金属</p>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <div class="goods-thumb">
+              <a href="#"><img src="img/icon/holder_110.png"></a>
+            </div>
+            <div class="goods-title">
+              <a href="#" class="title">家居8</a>
+            </div>
+            <p class="goods-price">1440元</p>
+          </li>
+          <li class="goods-item goods-item-s">
+            <a href="type.html" class="goods-more"th:href="type">浏览更多 <span>热门</span></a>
+            <div class="goods-thumb">
+              <a href="type.html"th:href="type"><i class="iconfont">&#xe700;</i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- 页脚 -->
+<div class="footer">
+  <div class="container">
+    <div class="footer-servise">
+      <ul class="servise-list clearfix">
+        <li class="servise-item">
+          <a href=""><i class="iconfont">&#xe712;</i>预约维修服务</a>
+        </li>
+        <li class="servise-item">
+          <a href=""><i class="iconfont">&#xe70d;</i>七天无理由退货</a>
+        </li>
+        <li class="servise-item">
+          <a href=""><i class="iconfont">&#xe706;</i>15天免费换货</a>
+        </li>
+        <li class="servise-item">
+          <a href=""><i class="iconfont">&#xe6f1;</i>满150元包邮</a>
+        </li>
+        <li class="servise-item">
+          <a href=""><i class="iconfont">&#xe709;</i>520余家售后网点</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-info clearfix">
+      <div class="more-info">
+        <ul class="info-list clearfix">
+          <li class="info-item">
+            <p class="info-title">帮助中心</p>
+            <p class="c1"><a href="">账户中心</a></p>
+            <p class="c1"><a href="">购物指南</a></p>
+            <p class="c1"><a href="">订单操作</a></p>
+          </li>
+          <li class="info-item">
+            <p class="info-title">服务支持</p>
+            <p class="c1"><a href="">售后政策</a></p>
+            <p class="c1"><a href="">自助服务</a></p>
+            <p class="c1"><a href="">相关下载</a></p>
+          </li>
+          <li class="info-item">
+            <p class="info-title">线下门店</p>
+            <p class="c1"><a href="">大米之家</a></p>
+            <p class="c1"><a href="">服务网点</a></p>
+            <p class="c1"><a href="">零售网点</a></p>
+          </li>
+          <li class="info-item">
+            <p class="info-title">关于大米</p>
+            <p class="c1"><a href="">了解大米</a></p>
+            <p class="c1"><a href="">加入大米</a></p>
+            <p class="c1"><a href="">联系我们</a></p>
+          </li>
+          <li class="info-item">
+            <p class="info-title">关注我们</p>
+            <p class="c1"><a href="">新浪微博</a></p>
+            <p class="c1"><a href="">大米部落</a></p>
+            <p class="c1"><a href="">官方微信</a></p>
+          </li>
+          <li class="info-item">
+            <p class="info-title">特色服务</p>
+            <p class="c1"><a href="">F 码通道</a></p>
+            <p class="c1"><a href="">礼物码</a></p>
+            <p class="c1"><a href="">防伪查询</a></p>
+          </li>
+        </ul>
+      </div>
+      <div class="cm-info">
+        <p class="phone">400-100-5678</p>
+        <p class="time">周一至周日 8:00-18:00<br />（仅收市话费）</p>
+        <a href="" class="online"><i class="iconfont">&#xe720;</i>24小时在线客服</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="banner"></div>
+</body>
+
+<script src="../static/js/main.js"th:src="@{/js/main.js}"></script>
+<script src="../static/js/holder.min.js"th:src="@{/js/holder.min.js}"></script>
+
+</html>

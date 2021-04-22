@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>智能家居 - 智能家居官方网站</title>
+
+    <link rel="shortcut icon" href="http://s01.mifile.cn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/main.css"th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/instyle.css"th:href="@{/css/instyle.css}">
+    <link rel="stylesheet" href="../static/css/admin.css"th:href="@{/css/admin.css}">
+    <link rel="stylesheet" href="../static/css/personal.css"th:href="@{/css/personal.css}">
+    <link href="https://cdn.bootcss.com/amazeui/2.5.1/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <script src="../static/js/jquery.min.js"th:src="@{/js/jquery.min.js}"></script>
+    <script src="https://cdn.bootcss.com/amazeui/2.5.1/js/amazeui.min.js"></script>
+
+</head>
+<body>
+<!-- 顶部导航条 -->
+<div class="topbar">
+    <div class="container">
+
+        <div class="topbar-cart">
+            <a href="cart.html"th:href="cart"><i></i>购物车</a>
+        </div>
+        <div class="topbar-info">
+            <a href="#" class="link">登录</a>
+            <span class="ver">|</span>
+            <a href="#" class="link">注册</a>
+            <span class="ver">|</span>
+            <a href="info.html" class="link"th:href="info">个人中心</a>
+        </div>
+    </div>
+</div>
+<!-- header区 -->
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a href="index.html" class="logo"th:href="index"></a>
+            <div class="advertising">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="header-nav">
+            <ul class="navlist clearfix">
+                <li class="all"></li>
+                <li class="item"><a href="index.html"th:href="index">首页</a></li>
+                <li class="item"><a href="type.html"th:href="type">智慧家居</a></li>
+                <li class="item"><a href="about.html"th:href="about">关于我们</a></li>
+
+            </ul>
+        </div>
+        <div class="header-search">
+            <form action="" class="search-form">
+                <input type="text" class="search-text">
+                <input type="submit" class="search-btn iconfont" value="&#xe652;">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 主要内容 -->
+<div class="page-main">
+    <div class="container">
+
+        <div class="center">
+            <div class="col-main">
+                <div class="main-wrap">
+
+                    <div class="user-info">
+                        <!--标题 -->
+                        <div class="am-cf am-padding">
+                            <div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">个人资料</strong> / <small>Personal&nbsp;information</small></div>
+                        </div>
+                        <hr/>
+
+                        <!--头像 -->
+
+
+                        <!--个人信息 -->
+                        <div class="info-main">
+                            <form class="am-form am-form-horizontal">
+
+                                <div class="am-form-group">
+                                    <label for="user-name2" class="am-form-label">昵称</label>
+                                    <div class="am-form-content">
+                                        <input type="text" id="user-name2" placeholder="nickname">
+
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label for="user-name" class="am-form-label">姓名</label>
+                                    <div class="am-form-content">
+                                        <input type="text" id="user-name2" placeholder="name">
+
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label class="am-form-label">性别</label>
+                                    <div class="am-form-content sex">
+                                        <label class="am-radio-inline">
+                                            <input type="radio" name="radio10" value="male" data-am-ucheck> 男
+                                        </label>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" name="radio10" value="female" data-am-ucheck> 女
+                                        </label>
+                                        <label class="am-radio-inline">
+                                            <input type="radio" name="radio10" value="secret" data-am-ucheck> 保密
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="am-form-group">
+                                    <label for="user-birth" class="am-form-label">生日</label>
+                                    <div class="am-form-content birth">
+                                        <div class="birth-select">
+                                            <select data-am-selected>
+                                                <option value="a">2015</option>
+                                                <option value="b">1987</option>
+                                            </select>
+                                            <em>年</em>
+                                        </div>
+                                        <div class="birth-select2">
+                                            <select data-am-selected>
+                                                <option value="a">12</option>
+                                                <option value="b">8</option>
+                                            </select>
+                                            <em>月</em></div>
+                                        <div class="birth-select2">
+                                            <select data-am-selected>
+                                                <option value="a">21</option>
+                                                <option value="b">23</option>
+                                            </select>
+                                            <em>日</em></div>
+                                    </div>
+
+                                </div>
+                                <div class="am-form-group">
+                                    <label for="user-phone" class="am-form-label">电话</label>
+                                    <div class="am-form-content">
+                                        <input id="user-phone" placeholder="telephonenumber" type="tel">
+
+                                    </div>
+                                </div>
+                                <div class="am-form-group">
+                                    <label for="user-email" class="am-form-label">电子邮件</label>
+                                    <div class="am-form-content">
+                                        <input id="user-email" placeholder="Email" type="email">
+
+                                    </div>
+                                </div>
+
+
+                                <div class="info-btn">
+                                    <div class="am-btn am-btn-danger">保存修改</div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--底部-->
+
+            </div>
+
+            <aside class="menu">
+                <ul>
+                    <li class="person">
+                        <a href="#">个人中心</a>
+                    </li>
+                    <li class="person">
+                        <a href="info.html"th:href="info">个人资料</a>
+
+                    </li>
+                    <li class="person">
+                        <a href="dingdan.html"th:href="dingdan">我的交易</a>
+
+                    </li>
+
+
+                </ul>
+
+            </aside>
+        </div>
+    </div>
+</div>
+<!-- 页脚 -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-servise">
+            <ul class="servise-list clearfix">
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe712;</i>预约维修服务</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe70d;</i>七天无理由退货</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe706;</i>15天免费换货</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe6f1;</i>满150元包邮</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe709;</i>520余家售后网点</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-info clearfix">
+            <div class="more-info">
+                <ul class="info-list clearfix">
+                    <li class="info-item">
+                        <p class="info-title">帮助中心</p>
+                        <p class="c1"><a href="">账户中心</a></p>
+                        <p class="c1"><a href="">购物指南</a></p>
+                        <p class="c1"><a href="">订单操作</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">服务支持</p>
+                        <p class="c1"><a href="">售后政策</a></p>
+                        <p class="c1"><a href="">自助服务</a></p>
+                        <p class="c1"><a href="">相关下载</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">线下门店</p>
+                        <p class="c1"><a href="">大米之家</a></p>
+                        <p class="c1"><a href="">服务网点</a></p>
+                        <p class="c1"><a href="">零售网点</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">关于大米</p>
+                        <p class="c1"><a href="">了解大米</a></p>
+                        <p class="c1"><a href="">加入大米</a></p>
+                        <p class="c1"><a href="">联系我们</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">关注我们</p>
+                        <p class="c1"><a href="">新浪微博</a></p>
+                        <p class="c1"><a href="">大米部落</a></p>
+                        <p class="c1"><a href="">官方微信</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">特色服务</p>
+                        <p class="c1"><a href="">F 码通道</a></p>
+                        <p class="c1"><a href="">礼物码</a></p>
+                        <p class="c1"><a href="">防伪查询</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cm-info">
+                <p class="phone">400-100-5678</p>
+                <p class="time">周一至周日 8:00-18:00<br />（仅收市话费）</p>
+                <a href="" class="online"><i class="iconfont">&#xe720;</i>24小时在线客服</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="banner"></div>
+</body>
+
+<script src="../static/js/main.js"th:src="@{/js/main.js}"></script>
+<script src="../static/js/holder.min.js"th:src="@{/js/holder.min.js}"></script>
+
+</html>

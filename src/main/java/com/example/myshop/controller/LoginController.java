@@ -28,19 +28,26 @@ public class LoginController {
                         HttpSession session, RedirectAttributes attributes,
                         HttpServletRequest request) {
         User user=userService.checkUser(username,password);
-        if (user!=null) {
-            session.setAttribute("user",user);
-            if (!CodeUtil.checkVerifyCode(request)) {
-                attributes.addFlashAttribute("message","验证码错误");
+        if(user.getType()=="0"){
+            if (user!=null) {
+                session.setAttribute("user",user);
+                if (!CodeUtil.checkVerifyCode(request)) {
+                    attributes.addFlashAttribute("message","验证码错误");
+                    return "redirect:/admin";
+                } else {
+                    return "/admin/index";
+                }
+            }else {
+                session.removeAttribute("user");
+                attributes.addFlashAttribute("message","用户名或密码错误");
                 return "redirect:/admin";
-            } else {
-                return "/admin/index";
-            }
-        }else {
-            session.removeAttribute("user");
-            attributes.addFlashAttribute("message","用户名或密码错误");
-            return "redirect:/admin";
 
+            }
+        }
+        else {
+            session.removeAttribute("user");
+            attributes.addFlashAttribute("message","您不是管理员！");
+            return "redirect:/admin";
         }
 
     }

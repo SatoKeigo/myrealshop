@@ -1,0 +1,435 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>智能家居 - 智能家居官方网站</title>
+
+    <link rel="shortcut icon" href="http://s01.mifile.cn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/main.css"th:href="@{/css/main.css}">
+
+    <script src="../static/js/jquery.min.js"th:src="@{/js/jquery.min.js}"></script>
+
+</head>
+<body>
+<!-- 顶部导航条 -->
+<div class="topbar">
+    <div class="container">
+
+        <div class="topbar-cart">
+            <a href="cart.html"th:href="cart"><i></i>购物车</a>
+        </div>
+        <div class="topbar-info">
+            <a href="#" class="link">登录</a>
+            <span class="ver">|</span>
+            <a href="#" class="link">注册</a>
+            <span class="ver">|</span>
+            <a href="info.html" class="link"th:href="info">个人中心</a>
+        </div>
+    </div>
+</div>
+<!-- header区 -->
+<div class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a href="index.html" class="logo"th:href="index"></a>
+            <div class="advertising">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="header-nav">
+            <ul class="navlist clearfix">
+                <li class="all"></li>
+                <li class="item"><a href="index.html"th:href="index">首页</a></li>
+                <li class="item"><a href="type.html"th:href="type">智慧家居</a></li>
+                <li class="item"><a href="about.html"th:href="about">关于我们</a></li>
+
+            </ul>
+        </div>
+        <div class="header-search">
+            <form action="" class="search-form">
+                <input type="text" class="search-text">
+                <input type="submit" class="search-btn iconfont" value="&#xe652;">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 主要内容 -->
+<div class="page-main">
+    <div class="container">
+<!--        <div class="cartTitle pull-right">-->
+<!--            <span>已选商品  (不含运费)</span>-->
+<!--            <span id="cartTitlePrice" class="cartTitlePrice">￥0.00</span>-->
+<!--            <button class="createOrderButton" style="background-color: rgb(170, 170, 170);" disabled="disabled">结 算</button>-->
+<!--        </div>-->
+        <div class="cartProductList">
+            <table class="cartProductTable">
+                <thead>
+                <tr>
+                    <th class="selectAndImage">
+                        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="selectAllItem" selectit="false">
+                        全选
+                    </th>
+                    <th>商品信息</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th width="120px">金额</th>
+                    <th class="operation">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+<!--                <tr >-->
+<!--                    <td>-->
+<!--                        <div class="shopId"><img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="selectAllItem" selectit="false">-->
+<!--                            <img src="https://ss2.bdstatic.com/8_V1bjqh_Q23odCf/pacific/1919701784.jpg" width="30" height="20">-->
+<!--                            <a href="#nowhere">店铺：华为官方旗舰店</a>-->
+
+<!--                        </div>-->
+<!--                    </td>-->
+<!--                </tr>-->
+
+                <tr class="cartProductItemTR" oiid="936"style="background-color: rgb(255, 255, 255);">
+                    <td>
+                        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="cartProductItemIfSelected" oiid="936" selectit="false">
+                        <a href="#nowhere" style="display:none"><img src="http://how2j.cn/tmall/img/site/cartSelected.png"></a>
+                        <img src="https://img.alicdn.com/bao/uploaded/i4/TB1yVcUNQPoK1RjSZKbytX1IXXa_112407.jpg_80x80.jpg" class="cartProductImg">
+                    </td>
+                    <td>
+                        <div class="cartProductLinkOutDiv">
+                            <a class="cartProductLink" href="#nowhere">【12期免息】Huawei/华为P30 Pro曲面屏超感光徕卡四摄变焦双景录像980智能手机</a>
+                            <div>
+<!--                                <img src="https://gw.alicdn.com/tfs/TB1XY8mheH2gK0jSZFEXXcqMpXa-63-16.png">-->
+                            </div>
+                            <div class="cartProductLinkInnerDiv">
+                                <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+                                <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="cartProductItemPromotionPrice" >￥4988.00</span>
+                    </td>
+                    <td>
+                        <div class="cartProductChangeNumberDiv">
+                            <span pid="365" class="hidden orderItemStock "style="display: none">75</span>
+                            <span pid="365" class="hidden orderItemPromotePrice "style="display: none">4988.00</span>
+                            <a href="#nowhere" class="numberMinus" pid="365" >-</a>
+                            <input value="1" autocomplete="off" class="orderItemNumberSetting" oiid="936" pid="365">
+                            <a href="#nowhere" class="numberPlus" pid="365" stock="75">+</a>
+                        </div>
+                    </td>
+                    <td>
+                            <span pid="365" oiid="936" id="cartProductItemSmallSumPrice" class="cartProductItemSmallSumPrice">
+                            ￥4988.00
+                            </span>
+                    </td>
+                    <td>
+                        <a href="#nowhere" oiid="936" class="deleteOrderItem">删除</a>
+                    </td>
+                </tr>
+                <tr class="cartProductItemTR" oiid="935" style="background-color: rgb(255, 255, 255);">
+                    <td>
+                        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="cartProductItemIfSelected" oiid="935" selectit="false">
+                        <a href="#nowhere" style="display:none"><img src="http://how2j.cn/tmall/img/site/cartSelected.png"></a>
+                        <img src="https://img.alicdn.com/bao/uploaded/i2/279470743/O1CN01UTTklQ1HMKmu9Xpuw_!!0-item_pic.jpg_80x80.jpg" class="cartProductImg">
+                    </td>
+                    <td>
+                        <div class="cartProductLinkOutDiv">
+                            <a class="cartProductLink" href="#nowhere">正版 C++游戏编程入门(第4版)c++游戏编程语言c语言编程教程 c++游戏编程从入门到精通 程序设计教材 计算机教材</a>
+                            <div class="cartProductLinkInnerDiv">
+                                <img title="支持信用卡支付" src="http://how2j.cn/tmall/img/site/creditcard.png">
+                                <img title="消费者保障服务,承诺7天退货" src="http://how2j.cn/tmall/img/site/7day.png">
+                                <img title="消费者保障服务,承诺如实描述" src="http://how2j.cn/tmall/img/site/promise.png">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+
+                        <span class="cartProductItemPromotionPrice">￥43.80</span>
+                    </td>
+                    <td>
+                        <div class="cartProductChangeNumberDiv">
+                            <span pid="809" class="hidden orderItemStock "style="display: none">17</span>
+                            <span pid="809" class="hidden orderItemPromotePrice "style="display: none">43.80</span>
+                            <a href="#nowhere" class="numberMinus" pid="809">-</a>
+                            <input value="1" autocomplete="off" class="orderItemNumberSetting" oiid="935" pid="809">
+                            <a href="#nowhere" class="numberPlus" pid="809" stock="17">+</a>
+                        </div>
+                    </td>
+                    <td>
+                            <span pid="809" oiid="935" id="cartProductItemSmallSumPrice2" class="cartProductItemSmallSumPrice">
+                            ￥43.80
+                            </span>
+                    </td>
+                    <td>
+                        <a href="#nowhere" oiid="935" class="deleteOrderItem">删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cartFoot">
+            <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="selectAllItem" selectit="false">
+            <span>全选</span>
+            <!--         <a href="#">删除</a> -->
+            <div class="pull-right">
+                <span>已选商品 <span id="cartSumNumber" class="cartSumNumber">0</span> 件</span>
+                <span>合计 (不含运费): </span>
+                <span id="cartSumPrice" class="cartSumPrice">￥0.00</span>
+                <button class="createOrderButton" style="background-color: rgb(170, 170, 170);" disabled="disabled">结  算</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- 页脚 -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-servise">
+            <ul class="servise-list clearfix">
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe712;</i>预约维修服务</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe70d;</i>七天无理由退货</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe706;</i>15天免费换货</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe6f1;</i>满150元包邮</a>
+                </li>
+                <li class="servise-item">
+                    <a href=""><i class="iconfont">&#xe709;</i>520余家售后网点</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-info clearfix">
+            <div class="more-info">
+                <ul class="info-list clearfix">
+                    <li class="info-item">
+                        <p class="info-title">帮助中心</p>
+                        <p class="c1"><a href="">账户中心</a></p>
+                        <p class="c1"><a href="">购物指南</a></p>
+                        <p class="c1"><a href="">订单操作</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">服务支持</p>
+                        <p class="c1"><a href="">售后政策</a></p>
+                        <p class="c1"><a href="">自助服务</a></p>
+                        <p class="c1"><a href="">相关下载</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">线下门店</p>
+                        <p class="c1"><a href="">大米之家</a></p>
+                        <p class="c1"><a href="">服务网点</a></p>
+                        <p class="c1"><a href="">零售网点</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">关于大米</p>
+                        <p class="c1"><a href="">了解大米</a></p>
+                        <p class="c1"><a href="">加入大米</a></p>
+                        <p class="c1"><a href="">联系我们</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">关注我们</p>
+                        <p class="c1"><a href="">新浪微博</a></p>
+                        <p class="c1"><a href="">大米部落</a></p>
+                        <p class="c1"><a href="">官方微信</a></p>
+                    </li>
+                    <li class="info-item">
+                        <p class="info-title">特色服务</p>
+                        <p class="c1"><a href="">F 码通道</a></p>
+                        <p class="c1"><a href="">礼物码</a></p>
+                        <p class="c1"><a href="">防伪查询</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cm-info">
+                <p class="phone">400-100-5678</p>
+                <p class="time">周一至周日 8:00-18:00<br />（仅收市话费）</p>
+                <a href="" class="online"><i class="iconfont">&#xe720;</i>24小时在线客服</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="banner"></div>
+</body>
+<script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+<script src="../static/js/main.js"th:src="@{/js/main.js}"></script>
+<script src="../static/js/holder.min.js"th:src="@{/js/holder.min.js}"></script>
+<script>
+    $(function(){
+        //点击产品选择框
+        $("img.cartProductItemIfSelected").click(function(){
+            var selectit = $(this).attr("selectit");
+            if("selectit"==selectit){
+                $(this).attr("src","http://how2j.cn/tmall/img/site/cartNotSelected.png");
+                $(this).attr("selectit","false")
+                $(this).parents("tr.cartProductItemTR").css("background-color","#fff");
+                syncSelect();
+                syncCreateOrderButton();
+                removePrice();
+            }
+            else{
+                $(this).attr("src","http://how2j.cn/tmall/img/site/cartSelected.png");
+                $(this).attr("selectit","selectit")
+                $(this).parents("tr.cartProductItemTR").css("background-color","#FFF8E1");
+                syncSelect();
+                syncCreateOrderButton();
+                getPrice();
+            }
+        });
+        //点击全选选择框
+        $("img.selectAllItem").click(function(){
+            var selectit = $(this).attr("selectit");
+            if("selectit"==selectit){
+                $("img.selectAllItem").attr("src","http://how2j.cn/tmall/img/site/cartNotSelected.png");
+                $("img.selectAllItem").attr("selectit","false")
+                $("img.cartProductItemIfSelected").attr("src","http://how2j.cn/tmall/img/site/cartNotSelected.png");
+                $("img.cartProductItemIfSelected").attr("selectit","false");
+                $("img.cartProductItemIfSelected").parents("tr.cartProductItemTR").css("background-color","#fff");
+                removePrice();
+
+            }
+            else{
+                $("img.selectAllItem").attr("src","http://how2j.cn/tmall/img/site/cartSelected.png");
+                $("img.selectAllItem").attr("selectit","selectit");
+                $("img.cartProductItemIfSelected").attr("src","http://how2j.cn/tmall/img/site/cartSelected.png");
+                $("img.cartProductItemIfSelected").attr("selectit","selectit");
+                $("img.cartProductItemIfSelected").parents("tr.cartProductItemTR").css("background-color","#FFF8E1");
+                getPrice();
+
+            }
+        });
+        //键盘输入数量
+        $(".orderItemNumberSetting").keyup(function(){
+            var pid=$(this).attr("pid");
+            var stock= $("span.orderItemStock[pid="+pid+"]").text();
+            var price= $("span.orderItemPromotePrice[pid="+pid+"]").text();
+            var num= $(".orderItemNumberSetting[pid="+pid+"]").val();
+            num = parseInt(num);
+            if(isNaN(num))
+            {num= 1;
+            }
+            if(num<=0)
+                num = 1;
+            if(num>stock)
+                num = stock;
+            $(".orderItemNumberSetting[pid="+pid+"]").val(num);
+            //改变金额
+            price=convertNumber(price)*num;
+            price=parseFloat(price).toFixed(2);
+            $(".cartProductItemSmallSumPrice[pid="+pid+"]").html("￥"+price);
+            getPrice();
+        });
+        //点击+增加数量
+        $(".numberPlus").click(function(){
+            var pid=$(this).attr("pid");
+            var stock= $("span.orderItemStock[pid="+pid+"]").text();
+            var price= $("span.orderItemPromotePrice[pid="+pid+"]").text();
+            var num= $(".orderItemNumberSetting[pid="+pid+"]").val();
+            ++num;
+            $(".orderItemNumberSetting[pid="+pid+"]").val(num);
+            price=convertNumber(price)*num;
+            price=parseFloat(price).toFixed(2);
+            $(".cartProductItemSmallSumPrice[pid="+pid+"]").html("￥"+price);
+            getPrice();
+        });
+        //点击-减少数量
+        $(".numberMinus").click(function(){
+            var pid=$(this).attr("pid");
+            var stock= $("span.orderItemStock[pid="+pid+"]").text();
+            var price= $("span.orderItemPromotePrice[pid="+pid+"]").text();
+            var num= $(".orderItemNumberSetting[pid="+pid+"]").val();
+            --num;
+            if(num==0)num=1;
+            $(".orderItemNumberSetting[pid="+pid+"]").val(num);
+            price=convertNumber(price)*num;
+            price=parseFloat(price).toFixed(2);
+            $(".cartProductItemSmallSumPrice[pid="+pid+"]").html("￥"+price);
+            getPrice();
+        })
+    });
+    //全选函数
+    function syncSelect(){
+        var selectAll = true;
+        $(".cartProductItemIfSelected").each(function(){
+            if("false"==$(this).attr("selectit")){
+                selectAll = false;
+            }
+        });
+        if(selectAll){
+            $("img.selectAllItem").attr("src","http://how2j.cn/tmall/img/site/cartSelected.png");
+        }
+
+        else{
+            $("img.selectAllItem").attr("src","http://how2j.cn/tmall/img/site/cartNotSelected.png");
+        }
+
+    }
+
+    function syncCreateOrderButton(){
+        var selectAny = false;
+        $(".cartProductItemIfSelected").each(function(){
+
+            if("selectit"==$(this).attr("selectit")){
+                selectAny = true;
+            }
+        });
+        if(selectAny){
+            $("button.createOrderButton").css("background-color","#C40000");
+            $("button.createOrderButton").removeAttr("disabled");
+        }
+        else{
+            $("button.createOrderButton").css("background-color","#AAAAAA");
+            $("button.createOrderButton").attr("disabled","disabled");
+        }
+    }
+    //获取产品金额
+    function getPrice(){
+        var price;
+        var oiid;
+        var sumPrice=0;
+        var sumNum=0;
+        $(".cartProductItemIfSelected").each(function(){
+            if("selectit"==$(this).attr("selectit")){
+                oiid=$(this).attr("oiid");
+                pid=$(".orderItemNumberSetting[oiid="+oiid+"]").attr("pid");
+                num=$(".orderItemNumberSetting[pid="+pid+"]").val();
+                sumNum=parseInt(sumNum)+parseInt(num);
+                if(isNaN(sumNum)){
+                    sumNum=1;
+                }
+                price=$(".cartProductItemSmallSumPrice[oiid="+oiid+"]").text();
+                price=convertNumber(price);
+                sumPrice=parseFloat(sumPrice)+parseFloat(price);
+                sumPrice=parseFloat(sumPrice).toFixed(2);
+                creatSumPrice(sumPrice,sumNum);
+            }
+        })
+    }
+
+    function convertNumber(price){
+        price=price.replace(/\￥|\,/g,'');
+        price=parseFloat(price).toFixed(2);
+        return price;
+    }
+    //将计算后的金额数转化成页面展示的价格，也就是增加价格符号
+    function creatSumPrice(sumPrice,sumMumber){
+        document.getElementById("cartSumPrice").innerHTML="￥"+sumPrice;
+        document.getElementById("cartTitlePrice").innerHTML="￥"+sumPrice;
+        document.getElementById("cartSumNumber").innerHTML=sumMumber;
+
+    }
+    //初始化价格
+    function removePrice(){
+        document.getElementById("cartSumPrice").innerHTML="￥0.00";
+        document.getElementById("cartTitlePrice").innerHTML="￥0.00";
+        document.getElementById("cartSumNumber").innerHTML="0";
+    }
+</script>
+
+</html>

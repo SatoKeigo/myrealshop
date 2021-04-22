@@ -8,7 +8,7 @@
         <result property="password" column="password"/>
     </resultMap>
     <select id="checkUser" resultMap="UserMap">
-       select name,password
+       select *
         from user
         where name=#{name}
         and password=#{password}
