@@ -19,7 +19,7 @@ public class Item2Controller {
     @Autowired
     ItemService itemService;
     @RequestMapping("/item")
-    public String itemPage(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap) {
+    public String item2Page(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap) {
         PageHelper.startPage(pagenum, 5);
         List<Item> items=itemService.showAllItem();
         PageInfo pageInfo = new PageInfo(items);

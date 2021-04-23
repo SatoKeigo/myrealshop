@@ -27,9 +27,6 @@ public class Index2Controller {
     public String infoPage() {
         return "info";
     }
-    @RequestMapping("/item")
-    public String iitemPage() {
-        return "item";
-    }
+    
 
 }
