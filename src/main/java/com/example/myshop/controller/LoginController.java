@@ -28,14 +28,20 @@ public class LoginController {
                         HttpSession session, RedirectAttributes attributes,
                         HttpServletRequest request) {
         User user=userService.checkUser(username,password);
-        if(user.getType()=="0"){
             if (user!=null) {
                 session.setAttribute("user",user);
                 if (!CodeUtil.checkVerifyCode(request)) {
                     attributes.addFlashAttribute("message","验证码错误");
                     return "redirect:/admin";
                 } else {
-                    return "/admin/index";
+                    if(user.getType().equals("0")){
+                        return "/admin/index";
+                    }
+                    else {
+                        session.removeAttribute("user");
+                        attributes.addFlashAttribute("message","您不是管理员！");
+                        return "redirect:/admin";
+                    }
                 }
             }else {
                 session.removeAttribute("user");
@@ -43,13 +49,6 @@ public class LoginController {
                 return "redirect:/admin";
 
             }
-        }
-        else {
-            session.removeAttribute("user");
-            attributes.addFlashAttribute("message","您不是管理员！");
-            return "redirect:/admin";
-        }
-
     }
     @GetMapping("/logout")
     public String logout(HttpSession session){

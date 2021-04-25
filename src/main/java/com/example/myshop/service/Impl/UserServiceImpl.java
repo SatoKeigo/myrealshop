@@ -43,6 +43,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void adduser(String name, String password) {
+        userMapper.adduser(name,password);
+    }
+
+    @Override
     public void deleteUserById(Integer id) {
         userMapper.deleteUserById(id);
     }

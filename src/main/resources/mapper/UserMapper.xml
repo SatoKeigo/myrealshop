@@ -42,4 +42,9 @@
         set password=#{password},type=#{type}
         where name=#{name}
     </update>
+    <insert id="adduser">
+        insert into
+        user(name,password,type)
+        values(#{name},#{password},1)
+    </insert>
 </mapper>

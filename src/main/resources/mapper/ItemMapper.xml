@@ -11,15 +11,31 @@
        select *
         from item
     </select>
+    <select id="showAllItem10" resultMap="ItemMap">
+       select *
+        from item
+        limit 10
+    </select>
     <select id="selectItemByName" resultMap="ItemMap">
        select *
         from item
         where name=#{name}
     </select>
+    <select id="selectItemById" resultMap="ItemMap">
+       select *
+        from item
+        where id=#{id}
+    </select>
     <select id="selectItemByType" resultMap="ItemMap">
        select *
         from item
         where type=#{type}
+    </select>
+    <select id="selectItemByType7" resultMap="ItemMap">
+       select *
+        from item
+        where type=#{type}
+        limit 7
     </select>
     <select id="selectItemByNameandType" resultMap="ItemMap">
        select *

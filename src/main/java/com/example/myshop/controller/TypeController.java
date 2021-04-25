@@ -20,7 +20,7 @@ public class TypeController {
     ItemService itemService;
     @RequestMapping("/type")
     public String typePage(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap) {
-        PageHelper.startPage(pagenum, 5);
+        PageHelper.startPage(pagenum, 12);
         List<Item> items=itemService.showAllItem();
         PageInfo pageInfo = new PageInfo(items);
         modelMap.addAttribute("pageInfo", pageInfo);

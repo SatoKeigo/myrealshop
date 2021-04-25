@@ -17,12 +17,19 @@
     <div class="container">
 
         <div class="topbar-cart">
-            <a href="cart.html"th:href="cart"><i></i>购物车</a>
+            <a href="cart.html"th:href="@{../cart}"><i></i>购物车</a>
         </div>
-        <div class="topbar-info">
-            <a href="#" class="link">登录</a>
+        <div class="topbar-info"id="unlogin">
+            <a href="#" th:href="login" class="link">登录</a>
             <span class="ver">|</span>
-            <a href="#" class="link">注册</a>
+            <a href="#"th:href="register" class="link">注册</a>
+            <span class="ver">|</span>
+            <a href="info.html" class="link"th:href="info">个人中心</a>
+        </div>
+        <div class="topbar-info" id="login" >
+            <a href="#" class="link" id="username">用户名</a>
+            <span class="ver">|</span>
+            <a href="#"th:href="@{logout}" class="link">注销</a>
             <span class="ver">|</span>
             <a href="info.html" class="link"th:href="info">个人中心</a>
         </div>
@@ -32,7 +39,7 @@
 <div class="header">
     <div class="container">
         <div class="header-logo">
-            <a href="index.html" class="logo"th:href="index"></a>
+            <a href="index.html" class="logo"th:href="@{../index}"></a>
             <div class="advertising">
                 <a href="#"></a>
             </div>
@@ -40,9 +47,9 @@
         <div class="header-nav">
             <ul class="navlist clearfix">
                 <li class="all"></li>
-                <li class="item"><a href="index.html"th:href="index">首页</a></li>
-                <li class="item"><a href="type.html"th:href="type">智慧家居</a></li>
-                <li class="item"><a href="about.html"th:href="about">关于我们</a></li>
+                <li class="item"><a href="index.html"th:href="@{../index}">首页</a></li>
+                <li class="item"><a href="type.html"th:href="@{../type}">智慧家居</a></li>
+                <li class="item"><a href="about.html"th:href="@{../about}">关于我们</a></li>
 
             </ul>
         </div>
@@ -65,23 +72,23 @@
             <a href=" ">商品详情</a>
         </div>
         <div class="center_con clearfix">
-            <div class="main_menu fl"><img src="./images/goods_detail.jpg"></div>
+            <div class="main_menu fl"><img src="./images/goods_detail.jpg" th:src="@{../{picture}(picture=${item.picture})}"></div>
             <div class="goods_detail_list fr">
-                <h3>大兴大棚草莓</h3>
+                <h3 th:text="${item.name}">大兴大棚草莓</h3>
                 <p>草莓浆果柔软多汁，味美爽口，适合速冻保险贮藏，草莓速冻后，可以保持原有的色、香、味，既便于贮藏，又便于外销。</p>
                 <div class="prize_bar">
-                    <div class="show_prize fl">￥<em id="price">16.80</em></div>
-                    <div class="show_unit fl">单位：500g</div>
+                    <div class="show_prize fl">￥<em id="price" th:text="${item.price}">16.80</em></div>
+                    <div class="show_unit fl">库存：<em id="price2" th:text="${item.num}">16.80</em></div>
                 </div>
                 <div class="goods_num clearfix">
                     <div class="num_name fl">数量：</div>
                     <div class="num_add fl">
                         <input type="text" id="inputnum" class="num_show fl" value="1">
-                        <a href="#"  onclick="click1()" class="add fr">+</a>
-                        <a href="#" onclick="click2()" class="minus fr">-</a>
+                        <a   onclick="click1()" class="add fr">+</a>
+                        <a  onclick="click2()" class="minus fr">-</a>
                     </div>
                 </div>
-                <div class="total">总价：<em id="sumprice">16.80元</em></div>
+                <div class="total">总价：<em id="sumprice"th:text="${item.price}">16.80元</em></div>
                 <div class="operate_btn">
                     <a href="" class="buy_btn">立即购买</a>
                     <a href="" class="add_cart">加入购物车</a>
@@ -184,5 +191,20 @@
             var sumprice =document.getElementById("price").innerHTML*10000*num/10000;
             document.getElementById("sumprice").innerHTML=sumprice+"元";
         }
+</script>
+<script  type="text/javascript"th:inline="javascript">
+    window.onload=function(){
+        var name =document.cookie;
+        if(name!=null&&name!="null"){
+            document.getElementById("unlogin").style.display="none";
+            document.getElementById("username").innerHTML=name;
+        }
+        else {
+            document.getElementById("login").style.display="none";
+        }
+    }
+    function logout(){
+        document.cookie=null;
+    }
 </script>
 </html>

@@ -21,19 +21,36 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public List<Item> selectItemByName(String name) {
         List<Item> items=itemMapper.selectItemByName(name);
-        return null;
+        return items;
+    }
+
+    @Override
+    public List<Item> showAllItem10() {
+        List<Item> items=itemMapper.showAllItem10();
+        return items;
     }
 
     @Override
     public List<Item> selectItemByType(String type) {
         List<Item> items=itemMapper.selectItemByType(type);
-        return null;
+        return items;
+    }
+    @Override
+    public List<Item> selectItemByType7(String type) {
+        List<Item> items=itemMapper.selectItemByType7(type);
+        return items;
     }
 
     @Override
     public List<Item> selectItemByNameandType(String name, String type) {
         List<Item> items=itemMapper.selectItemByNameandType(name,type);
-        return null;
+        return items;
+    }
+
+    @Override
+    public Item selectItemById(String id) {
+        Item items=itemMapper.selectItemById(id);
+        return items;
     }
 
     @Override

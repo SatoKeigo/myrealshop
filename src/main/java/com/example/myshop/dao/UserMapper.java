@@ -16,5 +16,6 @@ public interface UserMapper {
     List<User> selectUserByType(String type);
     List<User> selectUserByNameandType(String name,String type);
     void deleteUserById(Integer id);
+    void adduser(String name,String password);
     void updateUserName(String name,String password,String type);
 }

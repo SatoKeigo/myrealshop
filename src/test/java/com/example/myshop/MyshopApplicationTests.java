@@ -18,10 +18,8 @@ class MyshopApplicationTests {
     private ItemService itemService;
     @Test
     void contextLoads() {
-        List<Item> list=itemService.showAllItem();
-        for(int i=0;i<list.size();i++){
-            System.out.println(list.get(i).getPicture());
-        }
+        userService.adduser("z","z");
+
     }
 
 

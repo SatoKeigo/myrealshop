@@ -8,6 +8,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,12 +19,10 @@ import java.util.List;
 public class Item2Controller {
     @Autowired
     ItemService itemService;
-    @RequestMapping("/item")
-    public String item2Page(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap) {
-        PageHelper.startPage(pagenum, 5);
-        List<Item> items=itemService.showAllItem();
-        PageInfo pageInfo = new PageInfo(items);
-        modelMap.addAttribute("pageInfo", pageInfo);
+    @RequestMapping("/item/{id}")
+    public String item2Page(@PathVariable String id, ModelMap modelMap) {
+        Item items=itemService.selectItemById(id);
+        modelMap.addAttribute("item",items);
         return "item";
     }
 }
