@@ -4,15 +4,8 @@ public class Order {
     private Integer id;
     private String name;
     private Integer num;
-    private Double price;
-    private Double total;
-    private String address;
-    private String user;
 
-    public Order() {
-    }
-
-    public Order(Integer id, String name, Integer num, Double price, Double total, String address, String user) {
+    public Order(Integer id, String name, Integer num, Double price, Double total, String address, String user, String picture) {
         this.id = id;
         this.name = name;
         this.num = num;
@@ -20,7 +13,27 @@ public class Order {
         this.total = total;
         this.address = address;
         this.user = user;
+        this.picture = picture;
     }
+
+    private Double price;
+    private Double total;
+    private String address;
+    private String user;
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
+
+    private String picture;
+    public Order() {
+    }
+
+
 
     @Override
     public String toString() {

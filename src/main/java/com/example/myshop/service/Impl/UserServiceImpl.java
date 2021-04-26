@@ -37,6 +37,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User selectUserByName2(String name) {
+        User user =userMapper.selectUserByName2(name);
+        return user;
+    }
+
+    @Override
     public List<User> selectUserByNameandType(String name, String type) {
         List<User> user=userMapper.selectUserByNameandType(name,type);
         return user;
@@ -50,6 +56,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUserById(Integer id) {
         userMapper.deleteUserById(id);
+    }
+
+    @Override
+    public void updateUserName2(String name, String sex, String email, String phone) {
+        userMapper.updateUserName2(name,sex,email,phone);
     }
 
     @Override

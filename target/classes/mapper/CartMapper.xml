@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.myshop.dao.CartMapper">
+    <resultMap id="CartMap" type="Cart">
+
+    </resultMap>
+    <select id="selectbyuser" resultMap="CartMap">
+        select * from cart
+        where user=#{user}
+    </select>
+    <insert id="addcart" >
+       insert into cart(name,num,price,total,picture,user,address)
+       values(#{name},#{num},#{price},#{total},#{picture},#{user},#{address});
+    </insert>
+</mapper>

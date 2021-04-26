@@ -22,6 +22,11 @@
         from user
         where name=#{name}
     </select>
+    <select id="selectUserByName2" resultMap="UserMap">
+       select *
+        from user
+        where name=#{name}
+    </select>
     <select id="selectUserByType" resultMap="UserMap">
        select *
         from user
@@ -40,6 +45,12 @@
        update
         user
         set password=#{password},type=#{type}
+        where name=#{name}
+    </update>
+    <update id="updateUserName2" >
+       update
+        user
+        set sex=#{sex},phone=#{phone},email=#{email}
         where name=#{name}
     </update>
     <insert id="adduser">

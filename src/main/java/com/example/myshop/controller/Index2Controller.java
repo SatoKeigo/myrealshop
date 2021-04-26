@@ -36,18 +36,9 @@ public class Index2Controller {
         return "about";
     }
 
-    @RequestMapping("/cart")
-    public String cartPage() {
-        return "cart";
-    }
-    @RequestMapping("/dingdan")
-    public String dingdanxPage() {
-        return "dingdan";
-    }
-    @RequestMapping("/info")
-    public String infoPage() {
-        return "info";
-    }
+
+
+
     
 
 }

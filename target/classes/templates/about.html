@@ -21,15 +21,13 @@
 <div class="topbar">
     <div class="container">
 
-        <div class="topbar-cart">
+        <div class="topbar-cart"id="unlogin2">
             <a href="cart.html" th:href="cart"><i></i>购物车</a>
         </div>
         <div class="topbar-info"id="unlogin">
             <a href="#" th:href="login" class="link">登录</a>
             <span class="ver">|</span>
             <a href="#"th:href="register" class="link">注册</a>
-            <span class="ver">|</span>
-            <a href="info.html" class="link"th:href="info">个人中心</a>
         </div>
         <div class="topbar-info" id="login" >
             <a href="#" class="link" id="username">用户名</a>
@@ -211,6 +209,7 @@
         }
         else {
             document.getElementById("login").style.display="none";
+            document.getElementById("unlogin2").style.display="none";
         }
     }
     function logout(){
