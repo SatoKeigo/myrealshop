@@ -22,8 +22,8 @@ public class InfoController {
         return "info";
     }
     @RequestMapping("/updateuser")
-    public String updateuser(HttpSession session, ModelMap modelMap, @RequestParam("name")String name, @RequestParam("radio10")String sex, @RequestParam("phone")String phone, @RequestParam("email")String email) {
-        userService.updateUserName2(name,sex,phone,email);
+    public String updateuser(HttpSession session, ModelMap modelMap, @RequestParam("name")String name, @RequestParam("radio10")String sex, @RequestParam("phone")String phone, @RequestParam("email")String email,@RequestParam("address")String address) {
+        userService.updateUserName2(name,sex,phone,email,address);
         User user=userService.selectUserByName2(name);
         modelMap.addAttribute("user",user);
         return "info";

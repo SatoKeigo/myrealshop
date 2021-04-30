@@ -4,8 +4,13 @@ public class Order {
     private Integer id;
     private String name;
     private Integer num;
+    private Double price;
+    private Double total;
+    private String address;
+    private String user;
+    private String status;
 
-    public Order(Integer id, String name, Integer num, Double price, Double total, String address, String user, String picture) {
+    public Order(Integer id, String name, Integer num, Double price, Double total, String address, String user, String status, String picture) {
         this.id = id;
         this.name = name;
         this.num = num;
@@ -13,13 +18,17 @@ public class Order {
         this.total = total;
         this.address = address;
         this.user = user;
+        this.status = status;
         this.picture = picture;
     }
 
-    private Double price;
-    private Double total;
-    private String address;
-    private String user;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     public String getPicture() {
         return picture;

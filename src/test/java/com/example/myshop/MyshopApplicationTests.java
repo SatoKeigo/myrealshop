@@ -18,8 +18,10 @@ class MyshopApplicationTests {
     private ItemService itemService;
     @Test
     void contextLoads() {
-        userService.adduser("z","z");
-
+        List<User> users=userService.selectUserByNameandType("a",null);
+        for(User user: users){
+            System.out.println(user.toString());
+        }
     }
 
 

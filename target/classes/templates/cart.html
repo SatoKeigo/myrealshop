@@ -94,10 +94,10 @@
 <!--                        </div>-->
 <!--                    </td>-->
 <!--                </tr>-->
-
-                <tr class="cartProductItemTR" oiid="936"style="background-color: rgb(255, 255, 255);" th:each="cart:${cart}">
+                <div th:each="cart:${cart}">
+                <tr class="cartProductItemTR" oiid="936"th:oiid="${cart.id}"style="background-color: rgb(255, 255, 255);" >
                     <td>
-                        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="cartProductItemIfSelected" oiid="936" selectit="false">
+                        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="cartProductItemIfSelected" oiid="936"th:oiid="${cart.id}" selectit="false">
                         <a href="#nowhere" style="display:none"><img src="http://how2j.cn/tmall/img/site/cartSelected.png"></a>
                         <img src="https://img.alicdn.com/bao/uploaded/i4/TB1yVcUNQPoK1RjSZKbytX1IXXa_112407.jpg_80x80.jpg"th:src="${cart.picture}" class="cartProductImg">
                     </td>
@@ -119,22 +119,23 @@
                     </td>
                     <td>
                         <div class="cartProductChangeNumberDiv">
-                            <span pid="365" class="hidden orderItemStock "style="display: none">75</span>
-                            <span pid="365" class="hidden orderItemPromotePrice "style="display: none"th:text="${cart.price}">4988.00</span>
-                            <a href="#nowhere" class="numberMinus" pid="365" >-</a>
-                            <input value="1" autocomplete="off" class="orderItemNumberSetting" oiid="936" pid="365"th:value="${cart.num}">
-                            <a href="#nowhere" class="numberPlus" pid="365" stock="75">+</a>
+                            <span th:pid="${cart.id}"pid="365" class="hidden orderItemStock "style="display: none">75</span>
+                            <span th:pid="${cart.id}"pid="365" class="hidden orderItemPromotePrice "style="display: none"th:text="${cart.price}">4988.00</span>
+                            <a href="#nowhere" class="numberMinus" pid="365" th:pid="${cart.id}" >-</a>
+                            <input value="1" autocomplete="off" class="orderItemNumberSetting" oiid="936"th:oiid="${cart.id}" pid="365"th:pid="${cart.id}"th:value="${cart.num}">
+                            <a href="#nowhere" class="numberPlus" pid="365" th:pid="${cart.id}"stock="75">+</a>
                         </div>
                     </td>
                     <td>
-                            <span pid="365" oiid="936" id="cartProductItemSmallSumPrice" class="cartProductItemSmallSumPrice">
+                            <span pid="365" th:pid="${cart.id}"oiid="936"th:oiid="${cart.id}"th:text="${cart.total}" id="cartProductItemSmallSumPrice" class="cartProductItemSmallSumPrice">
                             ￥4988.00
                             </span>
                     </td>
                     <td>
-                        <a href="#nowhere" oiid="936" class="deleteOrderItem">删除</a>
+                        <a href="#nowhere" th:pid="${cart.id}"oiid="936" th:oiid="${cart.id}" class="deleteOrderItem">删除</a>
                     </td>
                 </tr>
+                </div>
 <!--                <tr class="cartProductItemTR" oiid="935" style="background-color: rgb(255, 255, 255);">-->
 <!--                    <td>-->
 <!--                        <img src="http://how2j.cn/tmall/img/site/cartNotSelected.png" class="cartProductItemIfSelected" oiid="935" selectit="false">-->
@@ -403,8 +404,8 @@
         $(".cartProductItemIfSelected").each(function(){
             if("selectit"==$(this).attr("selectit")){
                 oiid=$(this).attr("oiid");
-                pid=$(".orderItemNumberSetting[oiid="+oiid+"]").attr("pid");
-                num=$(".orderItemNumberSetting[pid="+pid+"]").val();
+                var pid=$(".orderItemNumberSetting[oiid="+oiid+"]").attr("pid");
+                var num=$(".orderItemNumberSetting[pid="+pid+"]").val();
                 sumNum=parseInt(sumNum)+parseInt(num);
                 if(isNaN(sumNum)){
                     sumNum=1;
@@ -424,16 +425,16 @@
         return price;
     }
     //将计算后的金额数转化成页面展示的价格，也就是增加价格符号
-    function creatSumPrice(sumPrice,sumMumber){
+    function creatSumPrice(sumPrice,sumNum){
         document.getElementById("cartSumPrice").innerHTML="￥"+sumPrice;
-        document.getElementById("cartTitlePrice").innerHTML="￥"+sumPrice;
-        document.getElementById("cartSumNumber").innerHTML=sumMumber;
+
+        document.getElementById("cartSumNumber").innerHTML=sumNum;
 
     }
     //初始化价格
     function removePrice(){
         document.getElementById("cartSumPrice").innerHTML="￥0.00";
-        document.getElementById("cartTitlePrice").innerHTML="￥0.00";
+
         document.getElementById("cartSumNumber").innerHTML="0";
     }
 </script>

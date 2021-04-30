@@ -11,5 +11,34 @@
        insert into order1(name,num,price,total,picture,user,status,address)
        values(#{name},#{num},#{price},#{total},#{picture},#{user},1,#{address});
     </insert>
-
+    <select id="selectAllorder" resultMap="OrderMap">
+        select *
+        from order1
+    </select>
+    <update id="updateOrderbyid">
+        update
+        order1
+        set address=#{address},status=#{status}
+        where id=#{id}
+    </update>
+    <select id="selectbyid" resultMap="OrderMap">
+        select *
+        from order1
+        where id=#{id}
+    </select>
+    <select id="selectorderByidandstatus" resultMap="OrderMap">
+        select *
+        from order1
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
+    <delete id="deleteOrder">
+        delete from order1 where id=#{id}
+    </delete>
 </mapper>

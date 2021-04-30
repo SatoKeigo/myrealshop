@@ -37,11 +37,17 @@
         where type=#{type}
         limit 7
     </select>
-    <select id="selectItemByNameandType" resultMap="ItemMap">
+    <select id="selectItemByidandname" resultMap="ItemMap">
        select *
         from item
-        where type=#{type}
-        and name=#{name}
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <if test="name != null">
+                and name = #{name}
+            </if>
+        </where>
     </select>
     <delete id="deleteItemById" >
        delete from item where id=#{id}
@@ -49,7 +55,7 @@
     <update id="updateItemName" >
        update
         user
-        set num=#{num},type=#{type},price=#{price}
-        where name=#{name}
+        set num=#{num},name=#{name},price=#{price},picture=#{picture}
+        where id=#{id}
     </update>
 </mapper>

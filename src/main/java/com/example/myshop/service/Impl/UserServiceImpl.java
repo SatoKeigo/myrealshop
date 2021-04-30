@@ -44,8 +44,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> selectUserByNameandType(String name, String type) {
-        List<User> user=userMapper.selectUserByNameandType(name,type);
-        return user;
+        List<User> users=userMapper.selectUserByNameandType(name,type);
+        return users;
     }
 
     @Override
@@ -59,8 +59,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUserName2(String name, String sex, String email, String phone) {
-        userMapper.updateUserName2(name,sex,email,phone);
+    public void updateUserName2(String name, String sex, String email, String phone,String address) {
+        userMapper.updateUserName2(name,sex,email,phone,address);
     }
 
     @Override

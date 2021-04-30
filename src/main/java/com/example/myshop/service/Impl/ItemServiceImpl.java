@@ -42,8 +42,8 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public List<Item> selectItemByNameandType(String name, String type) {
-        List<Item> items=itemMapper.selectItemByNameandType(name,type);
+    public List<Item> selectItemByidandname(String name, String id) {
+        List<Item> items=itemMapper.selectItemByidandname(name,id);
         return items;
     }
 
@@ -59,7 +59,9 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public void updateItemName(String name, Double price, String type, Integer num) {
-        itemMapper.updateItemName(name,price,type,num);
+    public void updateItemName(String name, Double price, Integer id, Integer num,String picture) {
+        itemMapper.updateItemName(name, price, id, num,picture);
     }
+
+
 }

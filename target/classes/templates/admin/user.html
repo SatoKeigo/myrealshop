@@ -80,7 +80,7 @@
                         <td th:text="${user.type}">ad</td>
 
                         <td>
-                            <a href="#" th:href="@{/admin/toupdate(id=${user.name})}" class="ui mini teal basic button">编辑</a>
+                            <a href="#" th:href="@{/admin/toupdate(name=${user.name})}" class="ui mini teal basic button">编辑</a>
                             <a href="#" th:href="@{/admin/delete(id=${user.id})}" class="ui mini red basic button">删除</a>
                         </td>
                     </tr>
@@ -92,7 +92,7 @@
                                 <a class=" item"th:href="@{/admin/user(pagenum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
                                 <a class=" item"th:href="@{/admin/user(pagenum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
                             </div>
-                            <a href="#" class="ui mini teal right floated basic button">新增</a>
+
                         </th>
                     </tr>
                     </tfoot>

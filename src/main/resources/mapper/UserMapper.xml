@@ -22,6 +22,7 @@
         from user
         where name=#{name}
     </select>
+
     <select id="selectUserByName2" resultMap="UserMap">
        select *
         from user
@@ -35,8 +36,14 @@
     <select id="selectUserByNameandType" resultMap="UserMap">
        select *
         from user
-        where type=#{type}
-        and name=#{name}
+        <where>
+            <if test="name != null">
+                name = #{name}
+            </if>
+            <if test="type != null">
+                and type = #{type}
+            </if>
+        </where>
     </select>
     <delete id="deleteUserById" >
        delete from user where id=#{id}
@@ -50,7 +57,7 @@
     <update id="updateUserName2" >
        update
         user
-        set sex=#{sex},phone=#{phone},email=#{email}
+        set sex=#{sex},phone=#{phone},email=#{email},address=#{address}
         where name=#{name}
     </update>
     <insert id="adduser">

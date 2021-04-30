@@ -47,15 +47,15 @@
             <div class="ui stackable container">
                 <!--头部-->
                 <form name="submit"   action="#"th:action="@{/admin/update}" method="post" class="ui segment form">
-                    <div class="inline fields">
+                    <div class="inline fields"th:each="user:${users}">
                         <div class="field">
-                            <input type="text" name="name"   placeholder="用户名"/>
+                            <input type="text" name="name"  th:value="${user.name}" placeholder="用户名"/>
                         </div>
                         <div class="field">
-                            <input type="text" name="password"   placeholder="密码"/>
+                            <input type="text" name="password"  th:value="${user.password}" placeholder="密码"/>
                         </div>
                         <div class="field">
-                            <input type="text" name="type"   placeholder="分类"/>
+                            <input type="text" name="type"th:value="${user.type}"   placeholder="分类"/>
                         </div>
 
                         <div class="field">

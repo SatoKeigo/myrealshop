@@ -34,9 +34,9 @@
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree"  lay-filter="test">
                 <li class="layui-nav-item"><a  th:href="@{/admin/index}">首页</a></li>>
-                <li class="layui-nav-item"><a th:href="@{/admin/order}">订单管理</a></li>>
-                <li class="layui-nav-item"><a class="layui-this" th:href="@{/admin/item}">商品管理</a></li>
-                <li class="layui-nav-item"><a th:href="@{/admin/user}">用户管理</a></li>
+                <li class="layui-nav-item"><a class="layui-this" th:href="@{/admin/order}">订单管理</a></li>>
+                <li class="layui-nav-item"><a th:href="@{/admin/item}">商品管理</a></li>
+                <li class="layui-nav-item"><a  th:href="@{/admin/user}">用户管理</a></li>
             </ul>
         </div>
     </div>
@@ -46,59 +46,26 @@
         <div class=" m-padded-tb-big m-container-small">
             <div class="ui stackable container">
                 <!--头部-->
-                <form name="search"   action="#"th:action="@{/admin/query3}" method="post" class="ui segment form">
+                <form name="submit"   action="#"th:action="@{/admin/update2}" method="post" class="ui segment form">
                     <div class="inline fields">
                         <div class="field">
-                            <input type="text" name="id"   placeholder="商品id"/>
+                            <input type="text" name="id" th:value="${order.id}"  placeholder="订单号"/>
                         </div>
                         <div class="field">
-                            <input type="text" name="name"   placeholder="商品名字"/>
+                            <input type="text" name="address" th:value="${order.address}"  placeholder="地址"/>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="status" th:value="${order.status}"  placeholder="状态"/>
                         </div>
 
                         <div class="field">
                             <button class="ui mini teal basic button">
-                                <i onclick="document.forms['search'].submit()" class="search icon"></i>搜索
+                                <i onclick="document.forms['submit'].submit()" class="search icon"></i>提交
                             </button>
                         </div>
                     </div>
                 </form>
-                <table class="ui table">
-                    <thead>
-                    <tr>
-                        <th>商品编号</th>
-                        <th>商品</th>
-                        <th>数量</th>
-                        <th>单价</th>
-                        <th>类型</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr th:each="item:${pageInfo.list}">
-                        <td th:text="${item.id}">1</td>
-                        <td th:text="${item.name}">伍兹</td>
-                        <td th:text="${item.num}">10</td>
-                        <td th:text="${item.price}">100</td>
-                        <td th:text="${item.type}">ad</td>
 
-                        <td>
-                            <a href="#" class="ui mini teal basic button"th:href="@{/admin/updateitem(id=${item.id})}">编辑</a>
-                            <a href="#" class="ui mini red basic button"th:href="@{/admin/delete3(id=${item.id})}">删除</a>
-                        </td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <th colspan="6">
-                            <div class="ui mini pagination menu">
-                                <a class=" item" th:href="@{/admin/item(pagenum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
-                                <a class=" item" th:href="@{/admin/item(pagenum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
-                            </div>
-                            <a href="#" class="ui mini teal right floated basic button">新增</a>
-                        </th>
-                    </tr>
-                    </tfoot>
-                </table>
             </div>
         </div>
     </div>

@@ -28,10 +28,13 @@ public class UserController {
         return "admin/user";
     }
     @RequestMapping("/query")
-    public String queryuserPage(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap,@RequestParam("name")String name) {
-
-        PageHelper.startPage(pagenum, 5);
-        List<User> users=userService.selectUserByName(name);
+    public String queryuserPage(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap,@RequestParam(value = "name",defaultValue = "null")String name,@RequestParam(value = "type",defaultValue = "null")String type) {
+        if(name.equals("null"))
+        {name=null;}
+        if(type.equals("null"))
+        {type=null;}
+                PageHelper.startPage(pagenum, 5);
+        List<User> users=userService.selectUserByNameandType(name,type);
         PageInfo pageInfo = new PageInfo(users);
         modelMap.addAttribute("pageInfo", pageInfo);
 
