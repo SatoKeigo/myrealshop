@@ -151,7 +151,10 @@
 <!--                </li>-->
 
             </ul>
-
+            <div class="ui mini pagination menu">
+                <a class=" item"th:href="@{/type(pagenum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a>
+                <a class=" item"th:href="@{/type(pagenum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a>
+            </div>
         </div>
 
     </div>

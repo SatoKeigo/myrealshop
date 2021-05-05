@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 @Mapper
 public interface ItemMapper {
-
+    void additem(String name,Double price,Integer num,String picture,String type);
     List<Item> showAllItem();
     List<Item> showAllItem10();
     List<Item> selectItemByName(String name);

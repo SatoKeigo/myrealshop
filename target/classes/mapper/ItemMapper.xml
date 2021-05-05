@@ -58,4 +58,7 @@
         set num=#{num},name=#{name},price=#{price},picture=#{picture}
         where id=#{id}
     </update>
+    <insert id="additem">
+        insert into item(name,num,price,picture,type) values(#{name},#{num},#{price},#{picture},#{type})
+    </insert>
 </mapper>

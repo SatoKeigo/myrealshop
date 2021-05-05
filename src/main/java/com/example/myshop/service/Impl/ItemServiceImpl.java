@@ -59,6 +59,11 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    public void additem(String name, Double price, Integer num, String picture, String type) {
+        itemMapper.additem(name, price, num, picture, type);
+    }
+
+    @Override
     public void updateItemName(String name, Double price, Integer id, Integer num,String picture) {
         itemMapper.updateItemName(name, price, id, num,picture);
     }
