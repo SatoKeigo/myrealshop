@@ -9,4 +9,6 @@ import java.util.List;
 public interface CartService {
     List<Cart> selectbyuser(String user);
     void addcart(String name,String num,String price,String total,String user,String picture,String address);
+    void cartdelete(Integer id);
+    Cart selectbyid(String id);
 }

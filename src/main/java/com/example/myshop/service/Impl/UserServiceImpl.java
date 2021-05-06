@@ -59,6 +59,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User countuser() {
+        User user=userMapper.countuser();
+        return  user;
+    }
+
+    @Override
     public void updateUserName2(String name, String sex, String email, String phone,String address) {
         userMapper.updateUserName2(name,sex,email,phone,address);
     }

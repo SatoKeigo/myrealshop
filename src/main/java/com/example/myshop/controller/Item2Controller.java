@@ -40,6 +40,7 @@ public class Item2Controller {
         String user=session.getAttribute("user").toString();
         String address=userService.selectUserByName2(user).getAddress();
         orderService.addorder(name,num,price,total,user,picture,address);
+        itemService.updateitemnum(name,num);
         return "redirect:/index";
     }
     @RequestMapping("/addcart")

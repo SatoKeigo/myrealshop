@@ -44,4 +44,28 @@ public class OrderServiceImpl implements OrderService {
     public void deleteOrder(String id) {
         orderMapper.deleteOrder(id);
     }
+
+    @Override
+    public List<Order> selectbyuserandstatus(String user,String status) {
+        List<Order> orders=orderMapper.selectbyuserandstatus(user,status);
+        return orders;
+    }
+
+    @Override
+    public List<Order> hotitem() {
+        List<Order> orders=orderMapper.hotitem();
+        return orders;
+    }
+
+    @Override
+    public Order countorder() {
+        Order order=orderMapper.countorder();
+        return order;
+    }
+
+    @Override
+    public Order counttotal() {
+        Order order=orderMapper.counttotal();
+        return order;
+    }
 }

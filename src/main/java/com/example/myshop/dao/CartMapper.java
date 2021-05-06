@@ -11,4 +11,6 @@ import java.util.List;
 public interface CartMapper {
     List<Cart> selectbyuser(String user);
     void addcart(String name,String num,String price,String total,String user,String picture,String address);
+    void cartdelete(Integer id);
+    Cart selectbyid(String id);
 }

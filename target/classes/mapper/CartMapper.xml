@@ -10,8 +10,15 @@
         select * from cart
         where user=#{user}
     </select>
+    <select id="selectbyid" resultMap="CartMap">
+        select * from cart
+        where id=#{id}
+    </select>
     <insert id="addcart" >
        insert into cart(name,num,price,total,picture,user,address)
        values(#{name},#{num},#{price},#{total},#{picture},#{user},#{address});
     </insert>
+    <delete id="cartdelete">
+        delete from cart where id=#{id}
+    </delete>
 </mapper>

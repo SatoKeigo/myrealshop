@@ -7,6 +7,9 @@
         <result property="name" column="name"/>
         <result property="password" column="password"/>
     </resultMap>
+    <resultMap id="UserMap2" type="User">
+        <result property="name" column="count(*)"/>
+    </resultMap>
     <select id="checkUser" resultMap="UserMap">
        select *
         from user
@@ -60,6 +63,9 @@
         set sex=#{sex},phone=#{phone},email=#{email},address=#{address}
         where name=#{name}
     </update>
+    <select id="countuser" resultMap="UserMap2">
+        select count(*) from  user
+    </select>
     <insert id="adduser">
         insert into
         user(name,password,type)

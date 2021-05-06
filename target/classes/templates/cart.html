@@ -132,7 +132,7 @@
                             </span>
                     </td>
                     <td>
-                        <a href="#nowhere" th:pid="${cart.id}"oiid="936" th:oiid="${cart.id}" class="deleteOrderItem">删除</a>
+                        <a href="#nowhere"th:href="@{/cartdelete(id=${cart.id})}" th:pid="${cart.id}"oiid="936" th:oiid="${cart.id}" class="deleteOrderItem">删除</a>
                     </td>
                 </tr>
                 </div>
@@ -185,7 +185,7 @@
                 <span>已选商品 <span id="cartSumNumber" class="cartSumNumber">0</span> 件</span>
                 <span>合计 (不含运费): </span>
                 <span id="cartSumPrice" class="cartSumPrice">￥0.00</span>
-                <button class="createOrderButton" style="background-color: rgb(170, 170, 170);" disabled="disabled">结  算</button>
+                <button onclick="cartsub()" class="createOrderButton" style="background-color: rgb(170, 170, 170);" disabled="disabled">结  算</button>
             </div>
         </div>
 
@@ -268,6 +268,25 @@
 <script src="../static/js/main.js"th:src="@{/js/main.js}"></script>
 <script src="../static/js/holder.min.js"th:src="@{/js/holder.min.js}"></script>
 <script>
+    function cartsub(){
+        var myarray = new Array();
+        $("img.cartProductItemIfSelected").each(function(){
+            var selectit = $(this).attr("selectit");
+
+            if("selectit"==selectit){
+                myarray.push($(this).attr("oiid"))
+            }
+        })
+        $.ajax({
+            type : 'POST',
+            url: "/cartsubmit",
+            contentType : "application/json" ,
+            data : JSON.stringify(myarray),
+            success : function(data) {
+                window.location.reload();
+            }
+        });
+    }
     $(function(){
         //点击产品选择框
         $("img.cartProductItemIfSelected").click(function(){
@@ -298,6 +317,8 @@
                 $("img.cartProductItemIfSelected").attr("src","http://how2j.cn/tmall/img/site/cartNotSelected.png");
                 $("img.cartProductItemIfSelected").attr("selectit","false");
                 $("img.cartProductItemIfSelected").parents("tr.cartProductItemTR").css("background-color","#fff");
+                syncSelect();
+                syncCreateOrderButton();
                 removePrice();
 
             }
@@ -307,6 +328,8 @@
                 $("img.cartProductItemIfSelected").attr("src","http://how2j.cn/tmall/img/site/cartSelected.png");
                 $("img.cartProductItemIfSelected").attr("selectit","selectit");
                 $("img.cartProductItemIfSelected").parents("tr.cartProductItemTR").css("background-color","#FFF8E1");
+                syncSelect();
+                syncCreateOrderButton();
                 getPrice();
 
             }

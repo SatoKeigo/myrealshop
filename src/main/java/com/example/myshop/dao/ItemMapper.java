@@ -19,5 +19,6 @@ public interface ItemMapper {
     List<Item> selectItemByidandname(String name,String id);
     Item selectItemById(String id);
     void deleteItemById(Integer id);
+    void updateitemnum(String name,String num);
     void updateItemName(String name,Double price,Integer id,Integer num,String picture);
 }

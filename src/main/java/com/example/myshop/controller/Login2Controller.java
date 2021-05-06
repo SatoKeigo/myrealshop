@@ -56,18 +56,7 @@ public class Login2Controller {
             if (user!=null) {
                 if(user.getType().equals("1")){
                     session.setAttribute("user",user.getName());
-                    modelMap.addAttribute("user",user.getName());
-                    List<Item> items1=itemService.showAllItem10();
-                    List<Item> items2=itemService.selectItemByType7("a");
-                    List<Item> items3=itemService.selectItemByType7("b");
-                    List<Item> items4=itemService.selectItemByType7("c");
-                    List<Item> items5=itemService.selectItemByType7("d");
-                    modelMap.addAttribute("hot",items1);
-                    modelMap.addAttribute("a",items2);
-                    modelMap.addAttribute("b",items3);
-                    modelMap.addAttribute("c",items4);
-                    modelMap.addAttribute("d",items5);
-                    return "index";
+                    return "redirect:/index";
                 }
                 else {
                     session.removeAttribute("user");

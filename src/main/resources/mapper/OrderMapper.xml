@@ -6,7 +6,16 @@
     <resultMap id="OrderMap" type="Order">
 
     </resultMap>
+    <resultMap id="OrderMap2" type="Order">
+        <id property="id" column="count(*)" />
 
+        <!-- 定义普通属性 -->
+        <result property="name" column="name" />
+        <result property="num" column="sum(num)" />
+
+        <result property="total" column="sum(total)" />
+
+    </resultMap>
     <insert id="addorder" >
        insert into order1(name,num,price,total,picture,user,status,address)
        values(#{name},#{num},#{price},#{total},#{picture},#{user},1,#{address});
@@ -37,6 +46,24 @@
                 and status = #{status}
             </if>
         </where>
+    </select>
+    <select id="countorder" resultMap="OrderMap2">
+        select count(*) from order1
+    </select>
+    <select id="counttotal" resultMap="OrderMap2">
+        select sum(total) from order1 where status=4
+    </select>
+    <select id="selectbyuserandstatus" resultMap="OrderMap">
+        select *
+        from order1
+        where user = #{user}
+        and status = #{status}
+    </select>
+    <select id="hotitem" resultMap="OrderMap2">
+        select name,sum(num),sum(total) from order1
+        group by name
+        order by sum(num) desc
+        limit 5
     </select>
     <delete id="deleteOrder">
         delete from order1 where id=#{id}

@@ -35,10 +35,4 @@ public class Index2Controller {
     public String aboutPage() {
         return "about";
     }
-
-
-
-
-    
-
 }

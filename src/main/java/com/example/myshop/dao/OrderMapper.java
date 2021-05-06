@@ -14,6 +14,11 @@ public interface OrderMapper {
     List<Order> selectAllorder();
     void updateOrderbyid(String id,String address,String status);
     Order selectbyid(String id);
+    List<Order> selectbyuserandstatus(String user,String status);
     List<Order> selectorderByidandstatus(String id, String status);
+    List<Order> hotitem();
     void deleteOrder(String id);
+    Order countorder();
+    Order counttotal();
+
 }

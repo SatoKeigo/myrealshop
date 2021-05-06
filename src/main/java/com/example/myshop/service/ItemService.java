@@ -16,4 +16,5 @@ public interface ItemService {
     void deleteItemById(Integer id);
     void additem(String name,Double price,Integer num,String picture,String type);
     void updateItemName(String name,Double price,Integer id,Integer num,String picture);
+    void updateitemnum(String name,String num);
 }

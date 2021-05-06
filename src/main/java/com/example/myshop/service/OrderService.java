@@ -13,4 +13,8 @@ public interface OrderService {
     Order selectbyid(String id);
     List<Order> selectorderByidandstatus(String id, String status);
     void deleteOrder(String id);
+    List<Order> selectbyuserandstatus(String user,String status);
+    List<Order> hotitem();
+    Order countorder();
+    Order counttotal();
 }

@@ -1,8 +1,10 @@
 package com.example.myshop;
 
 import com.example.myshop.bean.Item;
+import com.example.myshop.bean.Order;
 import com.example.myshop.bean.User;
 import com.example.myshop.service.ItemService;
+import com.example.myshop.service.OrderService;
 import com.example.myshop.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,12 +18,11 @@ class MyshopApplicationTests {
     private UserService userService;
     @Autowired
     private ItemService itemService;
+    @Autowired
+    private OrderService orderService;
     @Test
     void contextLoads() {
-        List<User> users=userService.selectUserByNameandType("a",null);
-        for(User user: users){
-            System.out.println(user.toString());
-        }
+        System.out.println(orderService.countorder().getId());
     }
 
 

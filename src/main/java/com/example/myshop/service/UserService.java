@@ -14,6 +14,7 @@ public interface UserService {
     List<User> selectUserByNameandType(String name,String type);
     void adduser(String name,String password);
     void deleteUserById(Integer id);
+    User countuser();
     void updateUserName2(String name,String sex,String email,String phone,String address);
     void updateUserName(String name,String password,String type);
 }

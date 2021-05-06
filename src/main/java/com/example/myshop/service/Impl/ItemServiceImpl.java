@@ -68,5 +68,10 @@ public class ItemServiceImpl implements ItemService {
         itemMapper.updateItemName(name, price, id, num,picture);
     }
 
+    @Override
+    public void updateitemnum(String name,String num) {
+        itemMapper.updateitemnum(name,num);
+    }
+
 
 }

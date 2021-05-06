@@ -35,7 +35,7 @@ public class LoginController {
                     return "redirect:/admin";
                 } else {
                     if(user.getType().equals("0")){
-                        return "/admin/index";
+                        return "redirect:/admin/index";
                     }
                     else {
                         session.removeAttribute("user");

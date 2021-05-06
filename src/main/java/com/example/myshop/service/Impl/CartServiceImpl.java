@@ -21,4 +21,15 @@ public class CartServiceImpl implements CartService {
     public void addcart(String name, String num, String price, String total, String user, String picture, String address) {
         cartMapper.addcart(name,num,price,total,user,picture,address);
     }
+
+    @Override
+    public void cartdelete(Integer id) {
+        cartMapper.cartdelete(id);
+    }
+
+    @Override
+    public Cart selectbyid(String id) {
+        Cart cart=cartMapper.selectbyid(id);
+        return cart;
+    }
 }
