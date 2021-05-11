@@ -7,17 +7,18 @@ public class Item {
     private Double price;
     private String picture;
     private String type;
-
+    private String comment;
     public Item() {
     }
 
-    public Item(Integer id, String name, Integer num, Double price, String picture, String type) {
+    public Item(Integer id, String name, Integer num, Double price, String picture, String type, String comment) {
         this.id = id;
         this.name = name;
         this.num = num;
         this.price = price;
         this.picture = picture;
         this.type = type;
+        this.comment = comment;
     }
 
     @Override
@@ -29,7 +30,16 @@ public class Item {
                 ", price=" + price +
                 ", picture='" + picture + '\'' +
                 ", type='" + type + '\'' +
+                ", comment='" + comment + '\'' +
                 '}';
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public Integer getId() {

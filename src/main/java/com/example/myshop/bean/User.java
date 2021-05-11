@@ -65,6 +65,7 @@ public class User {
                 ", phone='" + phone + '\'' +
                 ", sex='" + sex + '\'' +
                 ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 

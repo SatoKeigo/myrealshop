@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../static/css/main.css"th:href="@{/css/main.css}">
 
     <script src="../static/js/jquery.min.js"th:src="@{/js/jquery.min.js}"></script>
-
 </head>
 <body>
 <!-- 顶部导航条 -->
@@ -68,7 +67,7 @@
             <ul class="goods-list list-active hot-list clearfix" >
                 <li class="goods-item goods-item-m"th:each="item:${pageInfo.list}">
                     <div class="goods-thumb">
-                        <a href="@" th:href="@{item/{id}(id=${item.id})}"><img src="img/icon/holder_110.png" th:src="${item.picture}"></a>
+                        <a href="@" th:href="@{item/{id}(id=${item.id})}"><img src="img/icon/holder_110.png" style="height: 100%;width: 100%;" th:src="${item.picture}"></a>
                     </div>
                     <div class="goods-title">
                         <a href="#" th:href="@{item/{id}(id=${item.id})}" class="title" th:text="${item.name}">热门1</a>

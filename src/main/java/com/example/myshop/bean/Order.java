@@ -43,7 +43,6 @@ public class Order {
     }
 
 
-
     @Override
     public String toString() {
         return "Order{" +
@@ -54,6 +53,8 @@ public class Order {
                 ", total=" + total +
                 ", address='" + address + '\'' +
                 ", user='" + user + '\'' +
+                ", status='" + status + '\'' +
+                ", picture='" + picture + '\'' +
                 '}';
     }
 

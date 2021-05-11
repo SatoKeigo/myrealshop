@@ -64,17 +64,15 @@
 <div class="page-main">
     <div class="container">
         <div class="submena clearfix">
-            <a href=" ">全部分类</a>
-            <span>></span>
-            <a href=" ">新鲜水果</a>
+            <a href="type.html"th:href="@{../type}">全部分类</a>
             <span>></span>
             <a href=" ">商品详情</a>
         </div>
         <div class="center_con clearfix">
-            <div class="main_menu fl"><img id="picture" name="picture" th:value="${item.picture}" src="./images/goods_detail.jpg" th:src="@{../{picture}(picture=${item.picture})}"></div>
+            <div class="main_menu fl"><img id="picture" name="picture" th:value="${item.picture}" src="./images/goods_detail.jpg" style="height: 100%;width: 100%;"th:src="@{../{picture}(picture=${item.picture})}"></div>
             <div class="goods_detail_list fr">
                 <h3 id="name" th:text="${item.name}">大兴大棚草莓</h3>
-                <p>草莓浆果柔软多汁，味美爽口，适合速冻保险贮藏，草莓速冻后，可以保持原有的色、香、味，既便于贮藏，又便于外销。</p>
+                <p th:text="${item.comment}">草莓浆果柔软多汁，味美爽口，适合速冻保险贮藏，草莓速冻后，可以保持原有的色、香、味，既便于贮藏，又便于外销。</p>
                 <div class="prize_bar">
                     <div class="show_prize fl">￥<em id="price" name="price" th:text="${item.price}">16.80</em></div>
                     <div class="show_unit fl">库存：<em id="price2" th:text="${item.num}">16.80</em></div>
@@ -136,20 +134,20 @@
                     </li>
                     <li class="info-item">
                         <p class="info-title">线下门店</p>
-                        <p class="c1"><a href="">大米之家</a></p>
+                        <p class="c1"><a href="">家居之家</a></p>
                         <p class="c1"><a href="">服务网点</a></p>
                         <p class="c1"><a href="">零售网点</a></p>
                     </li>
                     <li class="info-item">
-                        <p class="info-title">关于大米</p>
-                        <p class="c1"><a href="">了解大米</a></p>
-                        <p class="c1"><a href="">加入大米</a></p>
+                        <p class="info-title">关于我们</p>
+                        <p class="c1"><a href="">了解我们</a></p>
+                        <p class="c1"><a href="">加入我们</a></p>
                         <p class="c1"><a href="">联系我们</a></p>
                     </li>
                     <li class="info-item">
                         <p class="info-title">关注我们</p>
                         <p class="c1"><a href="">新浪微博</a></p>
-                        <p class="c1"><a href="">大米部落</a></p>
+                        <p class="c1"><a href="">官方部落</a></p>
                         <p class="c1"><a href="">官方微信</a></p>
                     </li>
                     <li class="info-item">

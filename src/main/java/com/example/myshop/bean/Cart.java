@@ -42,6 +42,7 @@ public class Cart {
                 ", total=" + total +
                 ", address='" + address + '\'' +
                 ", user='" + user + '\'' +
+                ", picture='" + picture + '\'' +
                 '}';
     }
 
