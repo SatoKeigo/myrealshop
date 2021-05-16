@@ -74,7 +74,7 @@ public class ItemController {
         return "admin/additem";
     }
     @RequestMapping("/toadditem")
-    public String additem(@RequestParam("radio10")String type, @RequestParam("name")String name, @RequestParam("price")Double price, @RequestParam("num")Integer num, @RequestParam("picture") MultipartFile file, HttpServletRequest request, @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap){
+    public String additem(@RequestParam("radio10")String type, @RequestParam("name")String name,@RequestParam("comment")String comment, @RequestParam("price")Double price, @RequestParam("num")Integer num, @RequestParam("picture") MultipartFile file, HttpServletRequest request, @RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap){
         String filename=file.getOriginalFilename();
         String picture2="img/icon/"+filename;
         System.out.println(picture2);
@@ -84,7 +84,7 @@ public class ItemController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        itemService.additem(name, price, num, picture2, type);
+        itemService.additem(name, price, num, picture2, type, comment);
         PageHelper.startPage(pagenum, 5);
         List<Item> items=itemService.showAllItem();
         PageInfo pageInfo = new PageInfo(items);

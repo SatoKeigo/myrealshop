@@ -68,4 +68,14 @@ public class OrderServiceImpl implements OrderService {
         Order order=orderMapper.counttotal();
         return order;
     }
+
+    @Override
+    public void payOrderbyid(String id) {
+        orderMapper.payOrderbyid(id);
+    }
+
+    @Override
+    public void confirmOrderbyid(String id) {
+        orderMapper.confirmOrderbyid(id);
+    }
 }

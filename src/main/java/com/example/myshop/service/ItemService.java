@@ -14,7 +14,9 @@ public interface ItemService {
     List<Item> selectItemByidandname(String name,String id);
     Item selectItemById(String id);
     void deleteItemById(Integer id);
-    void additem(String name,Double price,Integer num,String picture,String type);
+    void additem(String name,Double price,Integer num,String picture,String type,String comment);
     void updateItemName(String name,Double price,Integer id,Integer num,String picture);
     void updateitemnum(String name,String num);
+    List<Item> selectType();
+
 }

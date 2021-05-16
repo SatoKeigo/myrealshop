@@ -27,4 +27,19 @@ public class dingdanController {
         modelMap.addAttribute("order4",orders4);
         return "dingdan";
     }
+    @RequestMapping("/confirmorder")
+    public String confirmorder(String id){
+        orderService.confirmOrderbyid(id);
+        return "redirect:/dingdan";
+    }
+    @RequestMapping("/payorder")
+    public String payorder(String id){
+        orderService.payOrderbyid(id);
+        return "redirect:/dingdan";
+    }
+    @RequestMapping("/deleteorder")
+    public String deleteorder(String id){
+        orderService.deleteOrder(id);
+        return "redirect:/dingdan";
+    }
 }

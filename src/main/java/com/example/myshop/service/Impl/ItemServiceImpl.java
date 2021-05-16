@@ -59,8 +59,8 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public void additem(String name, Double price, Integer num, String picture, String type) {
-        itemMapper.additem(name, price, num, picture, type);
+    public void additem(String name, Double price, Integer num, String picture, String type,String comment) {
+        itemMapper.additem(name, price, num, picture, type, comment);
     }
 
     @Override
@@ -71,6 +71,12 @@ public class ItemServiceImpl implements ItemService {
     @Override
     public void updateitemnum(String name,String num) {
         itemMapper.updateitemnum(name,num);
+    }
+
+    @Override
+    public List<Item> selectType() {
+        List<Item> items=itemMapper.selectType();
+        return items;
     }
 
 

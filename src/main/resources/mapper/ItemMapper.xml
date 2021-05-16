@@ -26,6 +26,9 @@
         from item
         where id=#{id}
     </select>
+    <select id="selectType" resultMap="ItemMap">
+        select distinct type from  item
+    </select>
     <select id="selectItemByType" resultMap="ItemMap">
        select *
         from item
@@ -59,7 +62,7 @@
         where id=#{id}
     </update>
     <insert id="additem">
-        insert into item(name,num,price,picture,type) values(#{name},#{num},#{price},#{picture},#{type})
+        insert into item(name,num,price,picture,type,comment) values(#{name},#{num},#{price},#{picture},#{type},#{comment})
     </insert>
     <update id="updateitemnum">
         update item

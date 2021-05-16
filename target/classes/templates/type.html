@@ -63,6 +63,10 @@
 <div class="page-main">
     <div class="container">
         <div class="home-ce clearfix">
+            <div th:each="type:${type}">
+                <a href="#" th:href="@{type(type=${type.type})}" class="title" th:text="${type.type}">热门1</a>
+
+            </div>
         <div class="col-md-8">
             <ul class="goods-list list-active hot-list clearfix" >
                 <li class="goods-item goods-item-m"th:each="item:${pageInfo.list}">

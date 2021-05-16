@@ -19,11 +19,28 @@ public class TypeController {
     @Autowired
     ItemService itemService;
     @RequestMapping("/type")
-    public String typePage(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum, ModelMap modelMap) {
-        PageHelper.startPage(pagenum, 12);
-        List<Item> items=itemService.showAllItem();
-        PageInfo pageInfo = new PageInfo(items);
-        modelMap.addAttribute("pageInfo", pageInfo);
-        return "type";
+    public String typePage(@RequestParam(required = false,defaultValue = "1",value = "pagenum")int pagenum,@RequestParam(value = "type",defaultValue = "false")String type, ModelMap modelMap) {
+        if(type.equals("false")){
+            PageHelper.startPage(pagenum, 12);
+            List<Item> items=itemService.showAllItem();
+            List<Item> types=itemService.selectType();
+            PageInfo pageInfo = new PageInfo(items);
+            modelMap.addAttribute("pageInfo", pageInfo);
+            modelMap.addAttribute("flag",type);
+            modelMap.addAttribute("type",types);
+            return "type";
+        }
+        else {
+            PageHelper.startPage(pagenum, 12);
+            List<Item> items=itemService.selectItemByType(type);
+            List<Item> types=itemService.selectType();
+            PageInfo pageInfo = new PageInfo(items);
+            modelMap.addAttribute("pageInfo", pageInfo);
+            modelMap.addAttribute("flag",type);
+            modelMap.addAttribute("type",types);
+            return "type";
+        }
+
     }
+
 }

@@ -65,6 +65,12 @@
         order by sum(num) desc
         limit 5
     </select>
+    <update id="payOrderbyid">
+        update  order1 set status=2 where id = #{id}
+    </update>
+    <update id="confirmOrderbyid">
+        update  order1 set status=4 where id = #{id}
+    </update>
     <delete id="deleteOrder">
         delete from order1 where id=#{id}
     </delete>

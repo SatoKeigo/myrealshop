@@ -173,12 +173,12 @@
                                                             <li class="td td-status">
                                                                 <div class="item-status">
                                                                     <p class="Mystatus">等待买家付款</p>
-                                                                    <p class="order-info"><a href="#">取消订单</a></p>
+                                                                    <p class="order-info"><a href="#" th:href="@{deleteorder(id=${order.id})}">取消订单</a></p>
 
                                                                 </div>
                                                             </li>
                                                             <li class="td td-change">
-                                                                <a href="pay.html">
+                                                                <a href="#" th:href="@{payorder(id=${order.id})}">
                                                                     <div class="am-btn am-btn-danger anniu">
                                                                         一键支付</div></a>
                                                             </li>
@@ -306,13 +306,13 @@
                                                                 <div class="item-status">
                                                                     <p class="Mystatus">卖家已发货</p>
                                                                     <p class="order-info"><a href="orderinfo.html">订单详情</a></p>
-                                                                    <p class="order-info"><a href="logistics.html">查看物流</a></p>
-                                                                    <p class="order-info"><a href="#">延长收货</a></p>
+
                                                                 </div>
                                                             </li>
                                                             <li class="td td-change">
+                                                                <a href="#" th:href="@{confirmorder(id=${order.id})}">
                                                                 <div class="am-btn am-btn-danger anniu">
-                                                                    确认收货</div>
+                                                                    确认收货</div></a>
                                                             </li>
                                                         </div>
                                                     </div>
@@ -372,7 +372,7 @@
                                                                 <div class="item-status">
                                                                     <p class="Mystatus">交易成功</p>
                                                                     <p class="order-info"><a href="orderinfo.html">订单详情</a></p>
-                                                                    <p class="order-info"><a href="logistics.html">查看物流</a></p>
+
                                                                 </div>
                                                             </li>
                                                             <li class="td td-change">
@@ -479,12 +479,12 @@
                                                             <li class="td td-status">
                                                                 <div class="item-status">
                                                                     <p class="Mystatus">等待买家付款</p>
-                                                                    <p class="order-info"><a href="#">取消订单</a></p>
+                                                                    <p class="order-info"><a href="#" th:href="@{deleteorder(id=${order.id})}">取消订单</a></p>
 
                                                                 </div>
                                                             </li>
                                                             <li class="td td-change">
-                                                                <a href="pay.html">
+                                                                <a href="pay.html"th:href="@{payorder(id=${order.id})}" >
                                                                     <div class="am-btn am-btn-danger anniu">
                                                                         一键支付</div></a>
                                                             </li>
@@ -673,13 +673,13 @@
                                                                 <div class="item-status">
                                                                     <p class="Mystatus">卖家已发货</p>
                                                                     <p class="order-info"><a href="orderinfo.html">订单详情</a></p>
-                                                                    <p class="order-info"><a href="logistics.html">查看物流</a></p>
-                                                                    <p class="order-info"><a href="#">延长收货</a></p>
+
                                                                 </div>
                                                             </li>
                                                             <li class="td td-change">
-                                                                <div class="am-btn am-btn-danger anniu">
-                                                                    确认收货</div>
+                                                                <a href="#" th:href="@{confirmorder(id=${order.id})}">
+                                                                    <div class="am-btn am-btn-danger anniu">
+                                                                        确认收货</div></a>
                                                             </li>
                                                         </div>
                                                     </div>

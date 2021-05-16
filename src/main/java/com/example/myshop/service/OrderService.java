@@ -17,4 +17,6 @@ public interface OrderService {
     List<Order> hotitem();
     Order countorder();
     Order counttotal();
+    void payOrderbyid(String id);
+    void confirmOrderbyid(String id);
 }

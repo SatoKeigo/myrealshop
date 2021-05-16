@@ -10,9 +10,10 @@ import java.util.List;
 @Repository
 @Mapper
 public interface ItemMapper {
-    void additem(String name,Double price,Integer num,String picture,String type);
+    void additem(String name,Double price,Integer num,String picture,String type,String comment);
     List<Item> showAllItem();
     List<Item> showAllItem10();
+    List<Item> selectType();
     List<Item> selectItemByName(String name);
     List<Item> selectItemByType(String type);
     List<Item> selectItemByType7(String type);

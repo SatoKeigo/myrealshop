@@ -20,5 +20,6 @@ public interface OrderMapper {
     void deleteOrder(String id);
     Order countorder();
     Order counttotal();
-
+    void payOrderbyid(String id);
+    void confirmOrderbyid(String id);
 }
