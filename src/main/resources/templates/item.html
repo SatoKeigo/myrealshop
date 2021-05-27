@@ -199,7 +199,9 @@
                 var total=price*10000*num/10000;
                 var name=document.getElementById("name").innerText;
                 var href= /*[[@{/buy}]]*/"arclist/";
-                window.location.href=href+"?name="+name+"&picture="+picture+"&price="+price+"&total="+total+"&num="+num;
+                window.location.href=href+"?name="+name+
+                    "&picture="+picture+"&price="+price+
+                    "&total="+total+"&num="+num;
             }
             else {
                 alert("请先登录");
